@@ -1,0 +1,2 @@
+source_file,date,time,ticker,side,strike,option_type,expiry,dte,price,bid_ask_range,spot,size,premium,volume,oi,vol_oi,chain_bid_ask,share_eqv,iv_pct,delta,theta,gamma,vega,rho,theo,sector,industry,earnings,rule,contract
+MOGA_12.04_250call2026-06-18.txt,2025-12-05,00:30:13,MOGA,ASK,250,call,2026-06-18,195d,$238.67,$9.70 - $14.50,$14.50,200,$290K,200,0,-,100%,"9,016",27.36,0.4508,-0.049,0.0083,0.6924,0.4999,14.50,Industrials,,,Low Historic Volume Floor,250 call 2026-06-18

@@ -1,0 +1,2 @@
+source_file,date,time,ticker,side,strike,option_type,expiry,dte,price,bid_ask_range,spot,size,premium,volume,oi,vol_oi,chain_bid_ask,share_eqv,iv_pct,delta,theta,gamma,vega,rho,theo,sector,industry,earnings,rule,contract
+HUN_12.02_12call2026-02-20.txt,2025-12-03,00:38:42,HUN,ASK,12,call,2026-02-20,80d,$10.21,$0.40 - $0.65,$0.60,"16,000",$960K,"16,029",632,25.36,100%,"553,217",63.18,0.3458,-0.007,0.1221,0.0176,0.0064,0.60,Basic Materials,Chemicals,76,Low Historic Volume Floor,12 call 2026-02-20

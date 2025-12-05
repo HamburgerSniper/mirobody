@@ -1,0 +1,2 @@
+source_file,date,time,ticker,side,strike,option_type,expiry,dte,price,bid_ask_range,spot,size,premium,volume,oi,vol_oi,chain_bid_ask,share_eqv,iv_pct,delta,theta,gamma,vega,rho,theo,sector,industry,earnings,rule,contract
+CE_12.02_45call2026-01-16.txt,2025-12-03,04:22:01,CE,ASK,45,call,2026-01-16,45d,$41.37,$1.50 - $1.85,$1.75,"1,800",$315K,"3,001",322,9.32,100%,"65,361",53.73,0.3631,-0.0326,0.0481,0.0545,0.0164,1.75,Basic Materials,Chemicals,77,Low Historic Volume Floor,45 call 2026-01-16
