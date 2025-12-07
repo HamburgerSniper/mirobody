@@ -71,19 +71,22 @@ Mirobody adopts a **"Tools-First"** philosophy. No complex binding logic is requ
 
 Launch the platform using our unified deployment script.
 
-**Option A: Local Mode**
-*Builds everything from scratch.*
-
-```bash
-./deploy.sh --mode=local
-```
-
-**Option B: Cloud Mode (ARM ready, x86 coming soon)**
+**Option A: Image Mode** ⭐ **(Recommended)**
 *Downloads pre-built images.*
+*Faster deployment with synthetic test user data included in the database (coming soon)*
 
 ```bash
 ./deploy.sh --mode=image
 ```
+
+**Option B: build Mode**
+*Builds everything from scratch.*
+
+```bash
+./deploy.sh --mode=build
+```
+
+
 
 **Daily Startup**
 *For regular use after initial setup, simply run:*
