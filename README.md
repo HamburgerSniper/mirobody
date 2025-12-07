@@ -1,6 +1,6 @@
 # Mirobody
 
-### Open Source AI Engine for Your Private Data
+### Open Source AI-Native Data Engine for Your Personal Data
 
 **Own Your Data. Empower Your AI.**
 
