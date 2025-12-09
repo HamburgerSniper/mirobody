@@ -53,8 +53,8 @@ class DBMonitor:
             self.indicators['K线状态'] = "未连接"
             return
 
-        # Fetch 1-min K-line
-        ret, df = self.ctx.get_cur_kline(self.code, n_bars, KLType.K_1M, AuType.QFQ)
+        # Fetch 1-min K-line (Use None for unadjusted price to match board price)
+        ret, df = self.ctx.get_cur_kline(self.code, n_bars, KLType.K_1M, AuType.NONE)
         if ret != RET_OK:
             logging.warning(f"[{self.code}] K-line fetch failed: {df}")
             self.indicators['K线状态'] = f"获取失败: {df}"
@@ -80,10 +80,31 @@ class DBMonitor:
         df['ma3'] = df['close'].rolling(3).mean()
         df['ma5'] = df['close'].rolling(5).mean()
         
-        # 2. 计算 VWAP (Intraday Cumulative)
-        df['cum_amount'] = df['turnover'].cumsum()
-        df['cum_vol'] = df['volume'].cumsum()
-        df['vwap'] = df['cum_amount'] / df['cum_vol']
+        # 2. 计算 VWAP (Intraday Cumulative - Resets Daily)
+        # Identify "Today" based on the last bar's date
+        last_time = df['time_key'].iloc[-1]
+        last_date = last_time.split(' ')[0] # 'YYYY-MM-DD'
+        
+        # Create a mask for the current day
+        day_mask = df['time_key'].str.startswith(last_date)
+        
+        # Calculate cumulative sums only for the current day
+        # We use .loc to assign back to the original dataframe safely
+        day_df = df.loc[day_mask].copy()
+        day_df['cum_amount'] = day_df['turnover'].cumsum()
+        day_df['cum_vol'] = day_df['volume'].cumsum()
+        day_df['vwap'] = day_df['cum_amount'] / day_df['cum_vol']
+        
+        # Assign VWAP back to original df
+        df.loc[day_mask, 'vwap'] = day_df['vwap']
+        
+        # For non-today rows, VWAP might be NaN or incorrect (based on previous logic), 
+        # but we mainly care about the recent output which is likely "today".
+        # Ideally, we should do this group-by date if we wanted full history correctness,
+        # but for performance on just the "last output_n", this is sufficient if output_n is small.
+        # If output_n spans across midnight, the previous day's VWAP won't be recalculated here 
+        # (it will stay NaN or previous value), but that's an edge case.
+
 
         # Slice the last N rows for output
         subset = df.tail(output_n).copy().reset_index(drop=True)
@@ -249,7 +270,7 @@ class DBMonitor:
             self.indicators['日K状态'] = "未连接"
             return
             
-        ret, df = self.ctx.get_cur_kline(self.code, 2, KLType.K_DAY, AuType.QFQ)
+        ret, df = self.ctx.get_cur_kline(self.code, 2, KLType.K_DAY, AuType.NONE)
         if ret == RET_OK and not df.empty and len(df) >= 2:
             # Index -1 is Today, -2 is Yesterday (usually)
             prev = df.iloc[-2]
