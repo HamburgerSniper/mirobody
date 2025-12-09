@@ -5,6 +5,7 @@ Futu Daban Indicator Service - 富途打板指标服务
 """
 import logging
 import time
+import argparse
 from typing import Any, Dict, List
 from datetime import datetime
 import os
@@ -526,15 +527,94 @@ class FutuDabanService:
             "metadata": {"timestamp": datetime.now().isoformat()}
         })
 
+def save_to_csv(data: Dict[str, Any], output_dir: str):
+    """
+    将打板数据保存为CSV文件
+    """
+    if not data.get('success') or not data.get('data'):
+        logging.warning("无数据可保存")
+        return
+
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+        logging.info(f"创建目录: {output_dir}")
+
+    timestamp = datetime.now().strftime("%Y%m%d")
+
+    for item in data['data']:
+        name = item.get('name', 'Unknown')
+        indicators = item.get('indicators', {})
+        
+        if not indicators:
+            continue
+
+        # 分离时间序列数据和标量数据
+        time_series_data = {}
+        scalar_data = {}
+        
+        # 假设 time_key 是主键，用来确定行数
+        time_keys = indicators.get('time_key', [])
+        if not time_keys:
+            logging.warning(f"[{name}] 无分时数据，跳过CSV保存")
+            continue
+            
+        n_rows = len(time_keys)
+        
+        for k, v in indicators.items():
+            if isinstance(v, list) and len(v) == n_rows:
+                time_series_data[k] = v
+            else:
+                scalar_data[k] = v
+        
+        # 添加外层的 score
+        scalar_data['score'] = item.get('score', 0)
+
+        try:
+            df = pd.DataFrame(time_series_data)
+            
+            # 将标量数据作为常数列添加 (方便查看，虽然有点冗余)
+            for k, v in scalar_data.items():
+                df[k] = v
+            
+            # 重新排序列，确保 time_key 在前
+            cols = ['time_key'] + [c for c in df.columns if c != 'time_key']
+            df = df[cols]
+            
+            filename = f"{name}_{timestamp}.csv"
+            filepath = os.path.join(output_dir, filename)
+            df.to_csv(filepath, index=False, encoding='utf-8-sig')
+            logging.info(f"已保存: {filepath}")
+            
+        except Exception as e:
+            logging.error(f"[{name}] 保存CSV失败: {e}")
+
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
+    # 配置日志输出到控制台
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(asctime)s - %(levelname)s - %(message)s'
+    )
     
-    # Simple Test
+    parser = argparse.ArgumentParser(description='富途打板指标获取工具')
+    parser.add_argument('stocks', nargs='?', default='利欧股份', help='股票名称，多个用逗号分隔')
+    parser.add_argument('--out', default='real_time_daban_indicator', help='输出目录')
+    parser.add_argument('--limit', type=int, default=10, help='输出最近N条分时数据')
+    
+    args = parser.parse_args()
+    
     service = FutuDabanService()
-    print("Testing FutuDabanService (Requires OpenD)...")
+    logging.info(f"开始获取数据: {args.stocks} ...")
+    
     try:
-        res = service.get_daban_indicators_realtime("利欧股份,中信证券", 2)
-        import json
-        print(json.dumps(res, ensure_ascii=False, indent=2))
+        res = service.get_daban_indicators_realtime(args.stocks, args.limit)
+        
+        if res.get('success'):
+            save_to_csv(res, args.out)
+            # 简要打印结果
+            for item in res['data']:
+                print(f"股票: {item['name']} | 得分: {item['score']}")
+        else:
+            logging.error(f"获取失败: {res.get('error')}")
+            
     except Exception as e:
-        print(f"Test failed (Likely no OpenD connection): {e}")
+        logging.error(f"运行出错 (请确保已启动 Futu OpenD): {e}")
