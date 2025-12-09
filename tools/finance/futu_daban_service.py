@@ -85,6 +85,39 @@ class DBMonitor:
             self.indicators['time_key'] = []
             return
 
+        # ---------------------------------------------------------
+        # [Fix] 获取正确的昨收 (Prev Close)
+        # 如果是历史日期，不能用 update_tick() 里的实时昨收
+        # ---------------------------------------------------------
+        correct_prev_close = self.indicators.get('昨收', 0.0)
+        
+        # 尝试通过日K线获取该日期之前的收盘价
+        try:
+            # 获取最近N天的日K
+            ret_day, df_day = self.ctx.get_cur_kline(self.code, 100, KLType.K_DAY, AuType.NONE)
+            if ret_day == RET_OK and not df_day.empty:
+                df_day = df_day.sort_values('time_key').reset_index(drop=True)
+                # time_key format for day kline is usually "YYYY-MM-DD 00:00:00"
+                
+                # 找到 target_date 的索引
+                # 模糊匹配日期部分
+                target_day_rows = df_day[df_day['time_key'].str.startswith(target_date)]
+                
+                if not target_day_rows.empty:
+                    idx = target_day_rows.index[0]
+                    if idx > 0:
+                        # 取前一天的收盘价
+                        prev_day_row = df_day.iloc[idx - 1]
+                        correct_prev_close = float(prev_day_row['close'])
+                        # 更新指标里的昨收，确保CSV输出正确
+                        self.indicators['昨收'] = correct_prev_close
+                    else:
+                        # 如果是获取到的第一天，尝试用开盘价反推或者是新股上市? 
+                        # 暂时保持原样或不做处理，防止越界
+                        pass
+        except Exception as e:
+            logging.warning(f"[{self.code}] 获取历史昨收失败: {e}")
+
         # 1. 计算 MA3, MA5
         df['ma3'] = df['close'].rolling(3).mean()
         df['ma5'] = df['close'].rolling(5).mean()
@@ -125,9 +158,9 @@ class DBMonitor:
         self.indicators['分时成交额'] = [round(float(x), 2) for x in subset['turnover']]
         
         # Calculate Pct Change Series (Requires prev_close from update_tick or day_kline)
-        prev_close = self.indicators.get('昨收', 0.0)
-        if prev_close > 0:
-            self.indicators['涨跌幅强度'] = [f"{round((x - prev_close) / prev_close * 100, 2)}%" for x in subset['close']]
+        # prev_close = self.indicators.get('昨收', 0.0)
+        if correct_prev_close > 0:
+            self.indicators['涨跌幅强度'] = [f"{round((x - correct_prev_close) / correct_prev_close * 100, 2)}%" for x in subset['close']]
         else:
             # Fallback if prev_close not available
             self.indicators['涨跌幅强度'] = ["0.00%" for _ in subset['close']]
