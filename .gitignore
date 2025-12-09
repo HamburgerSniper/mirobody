@@ -6,3 +6,4 @@ config/config.yaml
 __pycache__/
 .DS_Store
 .cursor/
+data/real_time_daban_indicator/
