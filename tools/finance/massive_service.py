@@ -96,7 +96,7 @@ class MassiveService:
             logger.error(f"API call failed to {url}: {str(e)}")
             return None
 
-    async def get_ticker_overview(self, ticker: str) -> Dict[str, Any]:
+    async def _get_ticker_overview(self, ticker: str) -> Dict[str, Any]:
         """
         Retrieve comprehensive details for a single ticker.
         Endpoint: /v3/reference/tickers/{ticker}
@@ -118,11 +118,11 @@ class MassiveService:
             
         return self._format_response(data, {"symbol": ticker, "type": "overview"})
 
-    async def get_sma(self, ticker: str, 
-                      timespan: str = 'day', 
-                      window: int = 20, 
-                      adjusted: bool = True, 
-                      limit: int = 10) -> Dict[str, Any]:
+    async def _get_sma(self, ticker: str, 
+                       timespan: str = 'day', 
+                       window: int = 20, 
+                       adjusted: bool = True, 
+                       limit: int = 10) -> Dict[str, Any]:
         """
         Retrieve Simple Moving Average (SMA).
         Endpoint: /v1/indicators/sma/{ticker}
@@ -162,11 +162,11 @@ class MassiveService:
         }
         return self._format_response(data, meta)
 
-    async def get_ema(self, ticker: str, 
-                      timespan: str = 'day', 
-                      window: int = 20, 
-                      adjusted: bool = True, 
-                      limit: int = 10) -> Dict[str, Any]:
+    async def _get_ema(self, ticker: str, 
+                       timespan: str = 'day', 
+                       window: int = 20, 
+                       adjusted: bool = True, 
+                       limit: int = 10) -> Dict[str, Any]:
         """
         Retrieve Exponential Moving Average (EMA).
         Endpoint: /v1/indicators/ema/{ticker}
@@ -206,13 +206,13 @@ class MassiveService:
         }
         return self._format_response(data, meta)
 
-    async def get_macd(self, ticker: str, 
-                       timespan: str = 'day', 
-                       short_window: int = 12, 
-                       long_window: int = 26, 
-                       signal_window: int = 9, 
-                       adjusted: bool = True, 
-                       limit: int = 10) -> Dict[str, Any]:
+    async def _get_macd(self, ticker: str, 
+                        timespan: str = 'day', 
+                        short_window: int = 12, 
+                        long_window: int = 26, 
+                        signal_window: int = 9, 
+                        adjusted: bool = True, 
+                        limit: int = 10) -> Dict[str, Any]:
         """
         Retrieve Moving Average Convergence/Divergence (MACD).
         Endpoint: /v1/indicators/macd/{ticker}
@@ -258,11 +258,11 @@ class MassiveService:
         }
         return self._format_response(data, meta)
 
-    async def get_rsi(self, ticker: str, 
-                      timespan: str = 'day', 
-                      window: int = 14, 
-                      adjusted: bool = True, 
-                      limit: int = 10) -> Dict[str, Any]:
+    async def _get_rsi(self, ticker: str, 
+                       timespan: str = 'day', 
+                       window: int = 14, 
+                       adjusted: bool = True, 
+                       limit: int = 10) -> Dict[str, Any]:
         """
         Retrieve Relative Strength Index (RSI).
         Endpoint: /v1/indicators/rsi/{ticker}
@@ -310,36 +310,36 @@ if __name__ == "__main__":
         service = MassiveService()
         symbol = "AAPL"
         
-        print(f"\n--- Testing get_ticker_overview for {symbol} ---")
-        res = await service.get_ticker_overview(symbol)
+        print(f"\n--- Testing _get_ticker_overview for {symbol} ---")
+        res = await service._get_ticker_overview(symbol)
         print(f"Success: {res.get('success')}")
         if res.get('success'):
             print(f"Name: {res['data'].get('name')}")
             print(f"Market Cap: {res['data'].get('market_cap')}")
 
-        print(f"\n--- Testing get_sma for {symbol} ---")
-        res = await service.get_sma(symbol, window=50)
+        print(f"\n--- Testing _get_sma for {symbol} ---")
+        res = await service._get_sma(symbol, window=50)
         print(f"Success: {res.get('success')}")
         if res.get('success'):
             values = res['data'].get('values', [])
             print(f"Latest 3 SMA values: {values[:3]}")
 
-        print(f"\n--- Testing get_ema for {symbol} ---")
-        res = await service.get_ema(symbol, window=20)
+        print(f"\n--- Testing _get_ema for {symbol} ---")
+        res = await service._get_ema(symbol, window=20)
         print(f"Success: {res.get('success')}")
         if res.get('success'):
             values = res['data'].get('values', [])
             print(f"Latest 3 EMA values: {values[:3]}")
 
-        print(f"\n--- Testing get_macd for {symbol} ---")
-        res = await service.get_macd(symbol)
+        print(f"\n--- Testing _get_macd for {symbol} ---")
+        res = await service._get_macd(symbol)
         print(f"Success: {res.get('success')}")
         if res.get('success'):
             values = res['data'].get('values', [])
             print(f"Latest 3 MACD values: {values[:3]}")
 
-        print(f"\n--- Testing get_rsi for {symbol} ---")
-        res = await service.get_rsi(symbol, window=14)
+        print(f"\n--- Testing _get_rsi for {symbol} ---")
+        res = await service._get_rsi(symbol, window=14)
         print(f"Success: {res.get('success')}")
         if res.get('success'):
             values = res['data'].get('values', [])

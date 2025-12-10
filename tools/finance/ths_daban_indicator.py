@@ -836,7 +836,7 @@ if __name__ == "__main__":
     
     async def test():
         service = ThsDabanService()
-        dates = ['20251205'] # Use a recent date
+        dates = ['20251209'] # Use a recent date
         names = "利欧股份"
         
         for date in dates:

@@ -38,7 +38,7 @@ class FundamentalsService:
         today = datetime.now().strftime("%Y-%m-%d")
         start_date = (datetime.now() - timedelta(days=365)).strftime("%Y-%m-%d")
         
-        res = await self.finnhub.get_financials(symbol, start_date, today)
+        res = await self.finnhub._get_financials(symbol, start_date, today)
         
         if not res.get("success"):
             return res
@@ -112,7 +112,7 @@ class FundamentalsService:
         fundamentals_data = metrics_res.get("data", {}) if metrics_res.get("success") else {}
 
         # 2. Get Other Data via FinnhubService aggregator
-        res = await self.finnhub.get_all_stock_info(symbol, start_date, today)
+        res = await self.finnhub._get_all_stock_info(symbol, start_date, today)
         
         if not res.get("success"):
             return res

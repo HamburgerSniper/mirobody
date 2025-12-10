@@ -68,6 +68,18 @@ Mirobody adopts a **"Tools-First"** philosophy. No complex binding logic is requ
   * 🐍 **Pure Python**: Use the libraries you love (Pandas, NumPy, etc.).
   * 🔧 **Universal**: A single tool file works for both REST API and MCP.
 
+> **⚠️ Important Naming Convention:**
+>
+> Your tool classes **must** end with `Service` to be auto-discovered by the MCP system.
+>
+> **Examples:**
+> * ✅ `class FinanceAnalyzerService:` - Will be registered
+> * ✅ `class DataProcessingService:` - Will be registered  
+> * ❌ `class FinanceAnalyzer:` - Will NOT be registered
+> * ❌ `class DataProcessor:` - Will NOT be registered
+>
+> Public async methods (not starting with `_`) in your Service classes will automatically become MCP tools.
+
 ### 3\. Deployment
 
 Launch the platform using our unified deployment script.
