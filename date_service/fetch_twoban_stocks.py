@@ -23,8 +23,8 @@ class TwoBanService:
         code = row['ts_code']
         pct_chg = row['pct_chg']
         
-        # 北交所 (8xx, 43x) - 30%
-        if code.startswith('8') or code.startswith('43'):
+        # 北交所 (8xx, 43x, 92x) - 30%
+        if code.startswith('8') or code.startswith('43') or code.startswith('92'):
              return pct_chg > 29.5
              
         # 科创板 (688), 创业板 (300, 301) - 20%
@@ -47,6 +47,20 @@ class TwoBanService:
             # 尝试使用 limit_list 接口
             df = self.pro.limit_list(trade_date=date)
             if not df.empty:
+                # 过滤北交所 (8xx, 43x, 92x, .BJ)
+                df = df[~df['ts_code'].str.contains(r'\.BJ$', regex=True)]
+                df = df[~df['ts_code'].str.match(r'^(8|43|92)')]
+                
+                # 过滤科创板 (688)
+                df = df[~df['ts_code'].str.startswith('688')]
+                
+                # 过滤创业板 (300, 301)
+                df = df[~df['ts_code'].str.startswith(('300', '301'))]
+                
+                # 过滤ST
+                if 'name' in df.columns:
+                    df = df[~df['name'].str.contains('ST', case=False, na=False)]
+                    
                 return df
             
             # Fallback: 如果 limit_list 返回空（可能是权限或数据问题），尝试自行计算
@@ -64,7 +78,7 @@ class TwoBanService:
             
             # 向量化筛选更快
             # 1. 拆分板块
-            is_bj = df_daily['ts_code'].str.match(r'^(8|43)')
+            is_bj = df_daily['ts_code'].str.match(r'^(8|43|92)') | df_daily['ts_code'].str.contains(r'\.BJ$', regex=True)
             is_kc_cy = df_daily['ts_code'].str.match(r'^(688|300|301)')
             is_main = ~(is_bj | is_kc_cy)
             
