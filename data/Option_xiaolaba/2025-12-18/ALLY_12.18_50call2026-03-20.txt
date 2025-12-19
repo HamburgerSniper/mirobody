@@ -1,0 +1,341 @@
+
+
+Options Data
+
+
+Market Data
+
+
+Screeners
+
+
+Stock Data
+
+
+Periscope
+
+
+Calendars
+
+
+Ticker Explorer
+
+
+Portfolio Manager
+
+
+Unusual Tools
+Charting Tool
+★
+Prediction Mkts
+
+
+Data Access/Api
+
+
+Media
+
+
+Misc
+
+
+
+UnusualWhales
+
+K
+
+API
+Changelog5
+Info
+Careers
+
+
+
+
+Filters
+
+My Flow
+Filter
+Select Filter
+
+Live Flow
+
+
+Prev
+
+
+Next
+
+
+Muted
+Results
+250
+Sort
+Time
+
+Columns
+
+
+CSV
+
+Info
+
+
+
+
+
+AI Filter Builder
+
+TIME : 12/8 21:30 - 12/18 23:59
+
+SIDE
+SHOW	HIDE
+Bid 🦴	
+
+
+Mid ↔️	
+
+
+Ask 🛍️	
+
+
+No Side 😐	
+
+
+
+CHAIN ACTIVITY
+Ask %?
+
+-
+
+Bid %?
+
+-
+
+Skew %?
+
+-
+
+
+OPTION TYPE
+SHOW	HIDE
+Calls	
+
+
+Puts	
+
+
+
+EQUITY TYPE
+SHOW	HIDE
+Stocks	
+
+
+ETFs / ETNs	
+
+
+Indices	
+
+
+ADRs	
+
+
+Expiration Dates
+Select...
+Premium?
+
+-
+
+Size?
+
+-
+
+Spot?
+
+-
+
+DTE?
+
+-
+
+Volume?
+
+-
+
+OI?
+
+-
+
+Vol/OI?
+
+-
+
+Mcap/AUM?
+
+-
+
+Stock?
+
+-
+
+Strike?
+
+-
+
+Spread?
+
+-
+
+% OTM?
+
+-
+
+Earnings Report?
+
+-
+
+
+GREEKS
+IV?
+
+-
+
+Delta?
+
+-
+
+Theta?
+
+-
+
+Gamma?
+
+-
+
+
+FLAG TYPE
+SHOW	HIDE
+Sweep	
+
+
+Cross	
+
+
+Floor	
+
+
+Normal	
+
+
+
+EXTRA
+SHOW	HIDE
+China 🇨🇳	
+
+
+Volatility ⚖️	
+
+
+Dividend 🥤	
+
+
+
+OTHERS
+Unusual
+
+Volume > OI
+
+Size > OI
+
+Opening trades
+
+Exclude deep ITM
+
+OPEX only
+
+OTM only
+
+Multi-leg only
+
+Single-leg only
+
+Today's trades only
+* Cannot be enabled with active time range
+
+Hide Expired
+
+Aggregated trades
+
+Show Canceled/Modified
+
+Option Watchlists
+Select...
+Stock Watchlists
+Select...
+Sectors
+Select...
+Industries
+Select...
+Exchanges
+Select...
+Trade Codes
+Select...
+ALLY
+$45.73
+2.44%
+Volume
+5,391
+Premiums
+643,153
+Bullish
+544,335
+84.64%
+Bearish
+80,913
+12.58%
+More
+Time - GMT+8 / UTC-8		Ticker	Side	Contract	DTE	Stock	% OTM	Bid-Ask	Spot	Size	Premium	Volume	OI	Vol/OI	Chain Bid/Ask	Share Eqv	IV %	Delta	Theta	Gamma	Vega	Rho	Theo	Sector	Industry	Earnings	Rule	Legs	Code	Flags	
+Tags
+
+Unusual Whales
+Powered by unusualwhales.com
+
+
+12/18 23:49:44
+	
+ALLY
+ASK	50	call	2026-03-20	92d	$45.75	9%	$1.05 - $1.20	$1.15	3,579	$412K	4,459	2,530	1.76	
+91%
+105,841	28.87	0.2957	-0.0125	0.0521	0.0793	0.0312	1.15	Financial Services	Credit Services	41	Repeated Hits Ascending Fill	SL	
+SLAN
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/11 22:42:39
+	
+ALLY
+BID	55	put	2026-02-20	64d	$45.77	-20%	$9.10 - $10.30	$9.63	40	$39K	40	0	-	
+100%
+-3,483	34.46	-0.8708	-0.01	0.0303	0.0425	-0.0963	9.63	Financial Services	Credit Services	41		ML-O	
+MLET
+🐂 - BULLISH🦴 - BID	
+
+
+12/11 00:21:04
+	
+ALLY
+ASK	46	put	2026-05-15	148d	$44.70	-3%	$4.10 - $4.60	$4.40	77	$34K	77	10	7.70	
+100%
+-3,944	31.67	-0.5122	-0.0117	0.0431	0.1165	-0.1167	4.40	Financial Services	Credit Services	41		SL	
+AUTO
+🐻 - BEARISH🛍️ - ASK	
+
+
+12/09 23:50:58
+	
+ALLY
+ASK	50	call	2028-01-21	764d	$42.50	18%	$4.80 - $5.70	$5.70	53	$30K	53	21	2.52	
+100%
+2,483	33.42	0.4686	-0.0054	0.0192	0.246	0.301	5.70	Financial Services	Credit Services	41		ML-O	
+MESL
+🐂 - BULLISH🛍️ - ASK	
