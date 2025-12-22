@@ -1,0 +1,591 @@
+
+
+Options Data
+
+
+Market Data
+
+
+Screeners
+
+
+Stock Data
+
+
+Periscope
+
+
+Calendars
+
+
+Ticker Explorer
+
+
+Portfolio Manager
+
+
+Unusual Tools
+Charting Tool
+★
+Prediction Mkts
+
+
+Data Access/Api
+
+
+Media
+
+
+Misc
+
+
+
+UnusualWhales
+
+K
+
+API
+Changelog6
+Info
+Careers
+
+
+
+
+Filters
+
+My Flow
+Filter
+Select Filter
+
+Live Flow
+
+
+Prev
+
+
+Next
+
+
+Muted
+Results
+250
+Sort
+Time
+
+Columns
+
+
+CSV
+
+Info
+
+
+
+
+
+AI Filter Builder
+
+TIME : 12/10 21:30 - 12/20 05:00
+
+SIDE
+SHOW	HIDE
+Bid 🦴	
+
+
+Mid ↔️	
+
+
+Ask 🛍️	
+
+
+No Side 😐	
+
+
+
+CHAIN ACTIVITY
+Ask %?
+
+-
+
+Bid %?
+
+-
+
+Skew %?
+
+-
+
+
+OPTION TYPE
+SHOW	HIDE
+Calls	
+
+
+Puts	
+
+
+
+EQUITY TYPE
+SHOW	HIDE
+Stocks	
+
+
+ETFs / ETNs	
+
+
+Indices	
+
+
+ADRs	
+
+
+Expiration Dates
+Select...
+Premium?
+
+-
+
+Size?
+
+-
+
+Spot?
+
+-
+
+DTE?
+
+-
+
+Volume?
+
+-
+
+OI?
+
+-
+
+Vol/OI?
+
+-
+
+Mcap/AUM?
+
+-
+
+Stock?
+
+-
+
+Strike?
+
+-
+
+Spread?
+
+-
+
+% OTM?
+
+-
+
+Earnings Report?
+
+-
+
+
+GREEKS
+IV?
+
+-
+
+Delta?
+
+-
+
+Theta?
+
+-
+
+Gamma?
+
+-
+
+
+FLAG TYPE
+SHOW	HIDE
+Sweep	
+
+
+Cross	
+
+
+Floor	
+
+
+Normal	
+
+
+
+EXTRA
+SHOW	HIDE
+China 🇨🇳	
+
+
+Volatility ⚖️	
+
+
+Dividend 🥤	
+
+
+
+OTHERS
+Unusual
+
+Volume > OI
+
+Size > OI
+
+Opening trades
+
+Exclude deep ITM
+
+OPEX only
+
+OTM only
+
+Multi-leg only
+
+Single-leg only
+
+Today's trades only
+* Cannot be enabled with active time range
+
+Hide Expired
+
+Aggregated trades
+
+Show Canceled/Modified
+
+Option Watchlists
+Select...
+Stock Watchlists
+Select...
+Sectors
+Select...
+Industries
+Select...
+Exchanges
+Select...
+Trade Codes
+Select...
+TLN
+$372.16
+0.12%
+Volume
+39,800
+Premiums
+196.82M
+Bullish
+89.04M
+45.24%
+Bearish
+104.51M
+53.10%
+More
+Time - GMT+8 / UTC-8		Ticker	Side	Contract	DTE	Stock	% OTM	Bid-Ask	Spot	Size	Premium	Volume	OI	Vol/OI	Chain Bid/Ask	Share Eqv	IV %	Delta	Theta	Gamma	Vega	Rho	Theo	Sector	Industry	Earnings	Rule	Legs	Code	Flags	
+Tags
+
+Unusual Whales
+Powered by unusualwhales.com
+
+
+12/20 04:56:21
+	
+TLN
+ASK	500	call	2026-08-21	245d	$372.01	34%	$23.70 - $27.50	$26.40	200	$528K	200	0	-	
+100%
+6,342	52.04	0.3171	-0.116	0.0022	1.0857	0.6146	26.40	Utilities	Utilities - Independent Power Producers	69	Floor Trade Large Cap	SL	
+SLFT
+FLOOR	🐂 - BULLISH🛍️ - ASK	
+
+
+12/20 04:41:16
+	
+TLN
+BID	440	call	2026-03-20	91d	$375.09	17%	$16.50 - $18.40	$16.70	40	$67K	42	8	5.25	
+95%
+1,238	51.03	0.3096	-0.1857	0.0037	0.6604	0.2479	16.70	Utilities	Utilities - Independent Power Producers	69		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/20 04:37:24
+	
+TLN
+BID	320	put	2026-01-02	14d	$376.56	15%	$0.00 - $4.80	$2.00	500	$100K	700	4	175.00	
+100%
+-4,356	64.15	-0.0871	-0.2677	0.0034	0.1169	-0.0133	2.00	Utilities	Utilities - Independent Power Producers	69		SL	
+SLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+
+12/20 01:37:11
+	
+TLN
+BID	370	call	2026-12-18	364d	$371.21	-0%	$82.50 - $87.30	$82.50	4,250	$35.1M	4,657	15	310.47	
+93%
+260,991	55.91	0.6141	-0.11	0.0018	1.418	1.4506	82.50	Utilities	Utilities - Independent Power Producers	69	Sweeps Followed By Floor	ML-O	
+MLFT
+FLOOR	🐻 - BEARISH🦴 - BID	
+
+
+12/20 01:37:11
+	
+TLN
+BID	370	put	2026-12-18	364d	$371.21	0%	$68.50 - $72.90	$68.65	3,500	$24M	3,604	3	1,201.33	
+97%
+-140,290	47.77	-0.4008	-0.0924	0.0022	1.433	-2.1685	68.65	Utilities	Utilities - Independent Power Producers	69	Sweeps Followed By Floor	ML-O	
+MLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+
+12/19 01:21:41
+	
+TLN
+ASK	400	call	2026-05-15	147d	$373.81	7%	$42.50 - $43.00	$43.00	34	$146K	35	11	3.18	
+100%
+1,690	56.26	0.497	-0.1813	0.003	0.9496	0.579	43.00	Utilities	Utilities - Independent Power Producers	69	Repeated Hits	SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/19 00:38:07
+	
+TLN
+BID	425	put	2026-01-09	21d	$373.28	-14%	$52.60 - $56.70	$54.64	32	$175K	32	0	-	
+100%
+-2,747	46.74	-0.8583	-0.2172	0.0052	0.2056	-0.226	54.64	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLET
+🐂 - BULLISH🦴 - BID	
+
+
+12/18 23:21:50
+	
+TLN
+BID	390	put	2026-03-20	91d	$370.56	-5%	$49.00 - $53.00	$50.00	10	$50K	10	9	1.11	
+100%
+-525	52.22	-0.5247	-0.2088	0.0041	0.7408	-0.6161	50.00	Utilities	Utilities - Independent Power Producers	69		SL	
+AUTO
+🐂 - BULLISH🦴 - BID	
+
+
+12/18 03:54:56
+	
+TLN
+BID	600	put	2028-01-21	763d	$355.97	-69%	$263.30 - $267.50	$264.84	2	$53K	2	0	-	
+100%
+-148	38.69	-0.7394	-0.0383	0.0016	1.6736	-11.0671	264.84	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLET
+🐂 - BULLISH🦴 - BID	
+
+
+12/18 00:48:48
+	
+TLN
+ASK	475	put	2025-12-26	7d	$358.01	-33%	$114.50 - $117.40	$117.40	3	$35K	3	0	-	
+100%
+-293	87.77	-0.9763	-0.1517	0.0011	0.0314	-0.1151	117.40	Utilities	Utilities - Independent Power Producers	69		SL	
+AUTO
+🐻 - BEARISH🛍️ - ASK	
+
+
+12/18 00:48:48
+	
+TLN
+ASK	465	put	2026-01-02	14d	$358.01	-30%	$104.50 - $107.40	$107.40	3	$32K	3	0	-	
+100%
+-292	61.94	-0.9745	-0.0847	0.0013	0.0446	-0.20	107.40	Utilities	Utilities - Independent Power Producers	69		SL	
+AUTO
+🐻 - BEARISH🛍️ - ASK	
+
+
+12/17 04:58:15
+	
+TLN
+ASK	395	call	2025-12-26	7d	$376.54	5%	$7.50 - $9.70	$8.90	96	$85K	148	12	12.33	
+90%
+3,337	64.86	0.3476	-0.7471	0.0091	0.2303	0.0334	8.90	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLAT
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/17 04:58:15
+	
+TLN
+ASK	395	call	2025-12-26	7d	$376.54	5%	$7.50 - $9.70	$8.83	34	$30K	50	12	4.17	
+70%
+1,179	64.55	0.3467	-0.7429	0.0092	0.2301	0.0333	8.83	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLAT
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/17 03:49:15
+	
+TLN
+ASK	410	call	2026-02-20	63d	$375.48	9%	$21.10 - $22.00	$22.00	33	$73K	34	31	1.10	
+100%
+1,317	55.18	0.399	-0.2584	0.0044	0.6164	0.2311	22.00	Utilities	Utilities - Independent Power Producers	69		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/16 22:40:08
+	
+TLN
+BID	450	call	2027-06-17	545d	$372.82	21%	$77.00 - $79.20	$77.00	100	$770K	100	62	1.61	
+100%
+5,315	56.37	0.5315	-0.0944	0.0015	1.8168	1.819	77.00	Utilities	Utilities - Independent Power Producers	69		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/16 04:33:19
+	
+TLN
+BID	240	call	2026-02-20	63d	$353.38	-32%	$116.30 - $119.80	$117.95	4	$47K	4	2	2.00	
+100%
+368	72.12	0.9204	-0.1218	0.0014	0.2242	0.3805	117.95	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLET
+🐻 - BEARISH🦴 - BID	
+
+
+12/16 02:32:57
+	
+TLN
+ASK	345	put	2025-12-19	0d	$357.88	4%	$6.60 - $7.70	$7.70	450	$347K	455	83	5.48	
+100%
+-14,887	89.64	-0.3308	-1.5214	0.0108	0.1358	-0.0138	7.70	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+
+12/16 02:32:57
+	
+TLN
+BID	380	call	2025-12-26	7d	$357.88	6%	$6.40 - $9.30	$7.82	200	$156K	201	20	10.05	
+100%
+6,346	64.95	0.3173	-0.654	0.0088	0.2214	0.0319	7.82	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLFT
+FLOOR	🐻 - BEARISH🦴 - BID	
+
+
+12/12 23:00:48
+	
+TLN
+BID	420	call	2026-03-20	91d	$364.32	15%	$22.00 - $24.70	$22.50	4,000	$9M	4,000	470	8.51	
+100%
+145,724	55.66	0.3643	-0.202	0.0036	0.7091	0.2959	22.50	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLFT
+FLOOR	🐻 - BEARISH🦴 - BID	
+
+
+12/12 22:30:18
+	
+TLN
+BID	360	call	2025-12-26	7d	$370.01	-3%	$21.30 - $26.00	$23.55	60	$141K	60	7	8.57	
+100%
+3,669	63.50	0.6114	-0.6306	0.0083	0.2777	0.0777	23.55	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLET
+🐻 - BEARISH🦴 - BID	
+
+
+12/12 22:30:18
+	
+TLN
+BID	365	call	2025-12-26	7d	$370.01	-1%	$18.30 - $22.70	$20.48	60	$123K	60	7	8.57	
+100%
+3,412	62.22	0.5687	-0.6335	0.0087	0.2848	0.0729	20.48	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLET
+🐻 - BEARISH🦴 - BID	
+
+
+12/12 04:57:01
+	
+TLN
+ASK	362.5	call	2025-12-12	-7d	$367.93	-1%	$6.90 - $10.00	$8.52	69	$59K	90	10	9.00	
+80%
+4,577	70.46	0.6634	-2.4774	0.0269	0.0703	0.0065	8.52	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLAT
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/12 04:38:51
+	
+TLN
+BID	385	call	2025-12-19	0d	$367.76	5%	$7.90 - $8.60	$8.02	153	$123K	202	54	3.74	
+100%
+5,245	67.95	0.3428	-0.8503	0.0099	0.2001	0.0259	8.02	Utilities	Utilities - Independent Power Producers	69	Floor Trade Large Cap	ML-O	
+MFSL
+FLOOR	🐻 - BEARISH🦴 - BID	
+
+
+12/12 04:00:11
+	
+TLN
+BID	400	put	2025-12-12	-7d	$365.53	-9%	$32.50 - $36.30	$33.92	22	$75K	22	4	5.50	
+100%
+-1,909	149.01	-0.8679	-3.0485	0.0075	0.0409	-0.0097	36.30	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+
+12/12 04:00:11
+	
+TLN
+BID	435	put	2025-12-12	-7d	$365.53	-19%	$67.50 - $71.30	$68.66	15	$103K	15	2	7.50	
+100%
+-1,363	237.97	-0.909	-3.7263	0.0036	0.0313	-0.0111	71.30	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+
+12/12 04:00:11
+	
+TLN
+ASK	470	put	2025-12-19	0d	$365.53	-29%	$102.50 - $106.30	$104.44	30	$313K	30	4	7.50	
+100%
+-2,780	110.76	-0.9266	-0.5201	0.0023	0.0753	-0.0975	106.30	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+
+12/12 04:00:11
+	
+TLN
+ASK	395	put	2025-12-12	-7d	$365.53	-8%	$27.50 - $31.30	$29.87	30	$90K	30	4	7.50	
+100%
+-2,835	91.35	-0.9449	-0.9719	0.0064	0.0213	-0.0103	29.87	Utilities	Utilities - Independent Power Producers	69		ML-O	
+MLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+
+12/12 02:30:19
+	
+TLN
+BID	362.5	call	2025-12-19	0d	$359.08	1%	$12.80 - $14.00	$13.30	32	$43K	35	1	35.00	
+100%
+1,550	70.16	0.4844	-0.9298	0.0107	0.2119	0.0352	13.30	Utilities	Utilities - Independent Power Producers	69		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/11 01:19:43
+	
+TLN
+ASK	357.5	put	2025-12-19	0d	$351.97	-2%	$16.70 - $18.60	$17.80	25	$45K	25	0	-	
+100%
+-1,345	66.98	-0.538	-0.8161	0.0107	0.2195	-0.0511	17.80	Utilities	Utilities - Independent Power Producers	69		SL	
+AUTO
+🐻 - BEARISH🛍️ - ASK	

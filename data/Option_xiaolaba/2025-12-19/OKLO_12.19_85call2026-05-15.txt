@@ -1,0 +1,811 @@
+
+
+Options Data
+
+
+Market Data
+
+
+Screeners
+
+
+Stock Data
+
+
+Periscope
+
+
+Calendars
+
+
+Ticker Explorer
+
+
+Portfolio Manager
+
+
+Unusual Tools
+Charting Tool
+★
+Prediction Mkts
+
+
+Data Access/Api
+
+
+Media
+
+
+Misc
+
+
+
+UnusualWhales
+
+K
+
+API
+Changelog5
+Info
+Careers
+
+
+
+
+Filters
+
+My Flow
+Filter
+Select Filter
+
+Live Flow
+
+
+Prev
+
+
+Next
+
+
+Muted
+Results
+250
+Sort
+Time
+
+Columns
+
+
+CSV
+
+Info
+
+
+
+
+
+AI Filter Builder
+
+TIME : 12/10 21:30 - 12/20 05:00
+
+SIDE
+SHOW	HIDE
+Bid 🦴	
+
+
+Mid ↔️	
+
+
+Ask 🛍️	
+
+
+No Side 😐	
+
+
+
+CHAIN ACTIVITY
+Ask %?
+
+-
+
+Bid %?
+
+-
+
+Skew %?
+
+-
+
+
+OPTION TYPE
+SHOW	HIDE
+Calls	
+
+
+Puts	
+
+
+
+EQUITY TYPE
+SHOW	HIDE
+Stocks	
+
+
+ETFs / ETNs	
+
+
+Indices	
+
+
+ADRs	
+
+
+Expiration Dates
+Select...
+Premium?
+
+-
+
+Size?
+
+-
+
+Spot?
+
+-
+
+DTE?
+
+-
+
+Volume?
+
+-
+
+OI?
+
+-
+
+Vol/OI?
+
+-
+
+Mcap/AUM?
+
+-
+
+Stock?
+
+-
+
+Strike?
+
+-
+
+Spread?
+
+-
+
+% OTM?
+
+-
+
+Earnings Report?
+
+-
+
+
+GREEKS
+IV?
+
+-
+
+Delta?
+
+-
+
+Theta?
+
+-
+
+Gamma?
+
+-
+
+
+FLAG TYPE
+SHOW	HIDE
+Sweep	
+
+
+Cross	
+
+
+Floor	
+
+
+Normal	
+
+
+
+EXTRA
+SHOW	HIDE
+China 🇨🇳	
+
+
+Volatility ⚖️	
+
+
+Dividend 🥤	
+
+
+
+OTHERS
+Unusual
+
+Volume > OI
+
+Size > OI
+
+Opening trades
+
+Exclude deep ITM
+
+OPEX only
+
+OTM only
+
+Multi-leg only
+
+Single-leg only
+
+Today's trades only
+* Cannot be enabled with active time range
+
+Hide Expired
+
+Aggregated trades
+
+Show Canceled/Modified
+
+Option Watchlists
+Select...
+Stock Watchlists
+Select...
+Sectors
+Select...
+Industries
+Select...
+Exchanges
+Select...
+Trade Codes
+Select...
+OKLO
+$84.64
+8.90%
+Volume
+38,493
+Premiums
+11.81M
+Bullish
+6.01M
+50.90%
+Bearish
+4.43M
+37.48%
+More
+Time - GMT+8 / UTC-8		Ticker	Side	Contract	DTE	Stock	% OTM	Bid-Ask	Spot	Size	Premium	Volume	OI	Vol/OI	Chain Bid/Ask	Share Eqv	IV %	Delta	Theta	Gamma	Vega	Rho	Theo	Sector	Industry	Earnings	Rule	Legs	Code	Flags	
+Tags
+
+Unusual Whales
+Powered by unusualwhales.com
+
+
+12/20 00:30:52
+	
+OKLO
+ASK	85	call	2026-05-15	147d	$84.36	1%	$20.10 - $21.15	$20.64	50	$103K	61	23	2.65	
+95%
+3,098	99.27	0.6195	-0.069	0.0072	0.2039	0.1273	20.64	Utilities	Utilities - Regulated Electric	94		SL	
+SLAN
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/19 23:12:03
+	
+OKLO
+BID	135	call	2026-05-15	147d	$82.11	64%	$7.15 - $8.85	$7.74	70	$54K	71	38	1.87	
+100%
+2,202	98.36	0.3145	-0.062	0.0069	0.185	0.0728	7.74	Utilities	Utilities - Regulated Electric	94		SL	
+SLAN
+🐻 - BEARISH🦴 - BID	
+
+
+12/19 23:07:52
+	
+OKLO
+ASK	120	call	2026-05-15	147d	$82.15	46%	$9.45 - $10.30	$10.30	200	$206K	200	90	2.22	
+100%
+7,767	99.44	0.3884	-0.0677	0.0074	0.1998	0.087	10.30	Utilities	Utilities - Regulated Electric	94	Floor Trade Large Cap	SL	
+SLFT
+FLOOR	🐂 - BULLISH🛍️ - ASK	
+
+
+12/19 04:58:48
+	
+OKLO
+ASK	85	call	2026-01-09	21d	$77.72	9%	$3.95 - $4.15	$4.15	150	$62K	228	28	8.14	
+73%
+5,787	90.74	0.3858	-0.1506	0.0221	0.073	0.0156	4.15	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/19 03:50:27
+	
+OKLO
+BID	101	put	2025-12-19	0d	$77.38	-31%	$23.00 - $25.15	$23.05	99	$228K	125	43	2.91	
+80%
+-8,238	469.02	-0.8321	-2.3838	0.0132	0.0102	-0.0025	25.15	Utilities	Utilities - Regulated Electric	94		ML-O	
+MLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+
+12/19 02:47:35
+	
+OKLO
+BID	80	call	2026-06-18	181d	$76.67	4%	$20.00 - $20.70	$20.00	124	$248K	131	99	1.32	
+99%
+7,635	99.86	0.6157	-0.057	0.0071	0.2068	0.1357	20.00	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/19 01:58:50
+	
+OKLO
+ASK	55	put	2026-01-02	14d	$77.70	29%	$0.32 - $0.57	$0.55	1,686	$93K	3,096	252	12.29	
+97%
+-10,321	119.78	-0.0612	-0.0761	0.0064	0.0191	-0.0022	0.55	Utilities	Utilities - Regulated Electric	94		SL	
+SLAN
+🐻 - BEARISH🛍️ - ASK	
+
+
+12/19 00:34:12
+	
+OKLO
+BID	95	call	2026-05-15	147d	$77.08	23%	$13.75 - $14.25	$13.75	42	$58K	43	30	1.43	
+100%
+2,091	100.47	0.4978	-0.0666	0.0081	0.1958	0.0998	13.75	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/19 00:28:46
+	
+OKLO
+BID	115	call	2026-05-15	147d	$77.18	49%	$9.45 - $9.90	$9.45	41	$39K	41	27	1.52	
+100%
+1,557	100.02	0.3797	-0.0633	0.0077	0.1871	0.0805	9.45	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/19 00:15:48
+	
+OKLO
+ASK	77	call	2025-12-26	7d	$77.25	-0%	$4.10 - $4.15	$4.15	195	$81K	238	18	13.22	
+87%
+10,450	88.41	0.5359	-0.2512	0.0393	0.0454	0.0082	4.15	Utilities	Utilities - Regulated Electric	94		SL	
+ISOI
+SWEEP	🐂 - BULLISH🛍️ - ASK	
+
+
+12/18 23:32:12
+	
+OKLO
+ASK	55	call	2026-01-30	42d	$78.00	-29%	$23.80 - $26.00	$24.95	14	$35K	14	12	1.17	
+100%
+1,230	102.75	0.8785	-0.0648	0.0073	0.054	0.0513	24.95	Utilities	Utilities - Regulated Electric	94		ML-O	
+MLET
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/18 22:30:01
+	
+OKLO
+BID	150	call	2026-03-20	91d	$80.57	86%	$2.50 - $4.25	$2.50	1,000	$250K	1,000	742	1.35	
+100%
+15,047	96.82	0.1505	-0.0498	0.006	0.0945	0.0243	2.50	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/18 04:32:33
+	
+OKLO
+BID	75	put	2026-01-23	35d	$75.31	0%	$8.45 - $9.15	$8.63	74	$64K	89	49	1.82	
+84%
+-3,225	92.42	-0.4358	-0.1177	0.0178	0.0944	-0.042	8.63	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐂 - BULLISH🦴 - BID	
+
+
+12/18 02:06:38
+	
+OKLO
+ASK	55	put	2025-12-26	7d	$78.51	30%	$0.15 - $0.23	$0.20	1,699	$34K	1,842	918	2.01	
+94%
+-5,170	127.76	-0.0304	-0.0602	0.0044	0.0085	-0.0006	0.20	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🛍️ - ASK	
+
+
+12/18 01:45:20
+	
+OKLO
+ASK	115	call	2026-01-30	42d	$78.26	47%	$1.81 - $2.38	$2.11	800	$169K	1,433	25	57.32	
+85%
+13,651	98.66	0.1706	-0.0773	0.0095	0.0689	0.0136	2.11	Utilities	Utilities - Regulated Electric	94		ML-O	
+MLFT
+FLOOR	🐂 - BULLISH🛍️ - ASK	
+
+
+12/18 01:39:34
+	
+OKLO
+ASK	115	call	2026-01-30	42d	$78.49	47%	$1.76 - $2.38	$2.10	200	$42K	233	25	9.32	
+99%
+3,409	97.95	0.1704	-0.0769	0.0095	0.0691	0.0136	2.10	Utilities	Utilities - Regulated Electric	94		ML-O	
+MLFT
+FLOOR	🐂 - BULLISH🛍️ - ASK	
+
+
+12/18 00:59:54
+	
+OKLO
+ASK	75	call	2025-12-26	7d	$79.07	-5%	$6.65 - $7.25	$7.00	55	$39K	68	19	3.58	
+91%
+3,651	97.20	0.6638	-0.2448	0.0302	0.0453	0.0112	7.00	Utilities	Utilities - Regulated Electric	94		ML-O	
+MLAT
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/18 00:42:26
+	
+OKLO
+BID	120	call	2026-01-30	42d	$78.13	54%	$1.71 - $1.83	$1.71	249	$43K	409	36	11.36	
+99%
+3,557	99.59	0.1429	-0.0693	0.0084	0.0612	0.0114	1.71	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/18 00:00:24
+	
+OKLO
+BID	79	call	2025-12-19	0d	$79.13	-0%	$3.25 - $3.60	$3.25	100	$33K	144	12	12.00	
+87%
+5,266	136.44	0.5266	-0.7954	0.0498	0.0233	0.0021	3.25	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/17 04:29:55
+	
+OKLO
+BID	145	put	2026-01-30	42d	$82.04	-77%	$62.95 - $65.45	$63.25	10	$63K	10	0	-	
+100%
+-963	83.99	-0.9627	-0.0211	0.0034	0.0235	-0.1754	63.25	Utilities	Utilities - Regulated Electric	94		SL	
+SLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+
+12/17 00:54:52
+	
+OKLO
+ASK	82	call	2025-12-26	7d	$80.92	1%	$4.40 - $4.50	$4.50	70	$32K	108	16	6.75	
+70%
+3,477	93.43	0.4967	-0.2497	0.0319	0.0534	0.0098	4.50	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/16 22:31:29
+	
+OKLO
+BID	135	put	2026-05-15	147d	$81.82	-65%	$59.05 - $62.15	$59.94	9	$54K	9	2	4.50	
+100%
+-634	93.16	-0.7049	-0.0555	0.0071	0.181	-0.4833	59.94	Utilities	Utilities - Regulated Electric	94		ML-S	
+TLET
+🐂 - BULLISH🦴 - BID	
+
+
+12/15 23:49:18
+	
+OKLO
+BID	60	call	2025-12-26	7d	$83.85	-28%	$23.65 - $26.10	$24.86	50	$124K	50	3	16.67	
+100%
+4,571	156.64	0.9142	-0.1626	0.0069	0.0228	0.0156	24.86	Utilities	Utilities - Regulated Electric	94		ML-O	
+MLET
+🐻 - BEARISH🦴 - BID	
+
+
+12/15 23:12:57
+	
+OKLO
+BID	95	call	2026-05-15	147d	$84.80	12%	$18.90 - $19.60	$18.90	74	$140K	75	24	3.13	
+100%
+4,194	104.46	0.5668	-0.0744	0.0069	0.2145	0.1206	18.90	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/15 23:00:45
+	
+OKLO
+BID	80	call	2025-12-26	7d	$83.61	-4%	$7.35 - $8.90	$8.12	60	$49K	63	37	1.70	
+100%
+3,773	108.60	0.6289	-0.271	0.024	0.0549	0.0134	8.12	Utilities	Utilities - Regulated Electric	94		ML-O	
+MLAT
+🐻 - BEARISH🦴 - BID	
+
+
+12/15 22:53:32
+	
+OKLO
+BID	95	call	2026-01-30	42d	$84.20	13%	$7.50 - $10.00	$7.90	50	$40K	50	13	3.85	
+100%
+2,175	99.62	0.435	-0.1276	0.0132	0.1177	0.0362	7.90	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/13 04:08:51
+	
+OKLO
+BID	140	put	2026-01-02	14d	$91.34	-53%	$47.20 - $49.85	$48.50	9	$44K	9	5	1.80	
+100%
+-807	125.78	-0.897	-0.1172	0.0065	0.0393	-0.0758	49.85	Utilities	Utilities - Regulated Electric	94		ML-O	
+MLAT
+🐂 - BULLISH🦴 - BID	
+
+
+12/13 01:39:33
+	
+OKLO
+ASK	20	put	2027-01-15	392d	$92.74	78%	$1.31 - $1.67	$1.64	6,406	$1.05M	6,407	2,189	2.93	
+100%
+-16,867	106.43	-0.0263	-0.0079	0.0006	0.0592	-0.0446	1.64	Utilities	Utilities - Regulated Electric	94		SL	
+SLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+
+12/13 00:43:02
+	
+OKLO
+BID	96	call	2025-12-26	7d	$90.53	6%	$4.90 - $5.25	$5.00	100	$50K	139	18	7.72	
+84%
+4,232	101.95	0.4232	-0.2529	0.0217	0.0694	0.0128	5.00	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/13 00:35:10
+	
+OKLO
+BID	92	call	2025-12-12	-7d	$90.77	1%	$1.10 - $1.19	$1.10	498	$55K	744	99	7.52	
+91%
+19,545	10.45	0.3925	-0.0118	0.0945	0.1496	0.0635	1.10	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/12 23:58:42
+	
+OKLO
+BID	109	put	2025-12-12	-7d	$94.20	-16%	$14.80 - $14.85	$14.80	126	$186K	154	40	3.85	
+85%
+-12,432	14.17	-0.9866	-0.001	0.0056	0.0148	-0.2254	14.80	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐂 - BULLISH🦴 - BID	
+
+
+12/12 23:58:42
+	
+OKLO
+ASK	89	call	2025-12-12	-7d	$94.20	-6%	$5.30 - $5.40	$5.40	136	$73K	153	95	1.61	
+92%
+12,359	9.51	0.9087	-0.0047	0.04	0.0707	0.1678	5.40	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/12 23:58:42
+	
+OKLO
+ASK	49	call	2025-12-19	0d	$94.24	-48%	$45.20 - $45.25	$45.25	126	$570K	126	115	1.10	
+100%
+12,583	163.93	0.9986	-0.007	0.0002	0.0006	0.0094	45.25	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/12 23:58:40
+	
+OKLO
+ASK	80	call	2025-12-12	-7d	$94.14	-15%	$14.85 - $14.90	$14.90	112	$167K	138	35	3.94	
+81%
+9,972	30.76	0.8904	-0.0165	0.0142	0.0808	0.1442	14.90	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/12 23:58:09
+	
+OKLO
+BID	92	call	2025-12-19	0d	$95.84	-4%	$7.60 - $8.70	$7.60	250	$190K	284	90	3.16	
+88%
+15,949	105.47	0.6379	-0.375	0.0268	0.0498	0.0103	7.60	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/12 22:53:38
+	
+OKLO
+BID	97	call	2026-01-30	42d	$98.24	-1%	$15.00 - $16.30	$15.00	24	$36K	24	0	-	
+100%
+1,409	101.21	0.5872	-0.145	0.0107	0.1402	0.0573	15.00	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/12 03:40:00
+	
+OKLO
+ASK	138	put	2025-12-12	-7d	$102.07	-35%	$35.00 - $37.70	$36.45	226	$824K	226	48	4.71	
+100%
+-21,103	360.44	-0.9337	-1.2387	0.0067	0.0069	-0.0036	36.45	Utilities	Utilities - Regulated Electric	94		SL	
+SLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+
+12/12 03:40:00
+	
+OKLO
+BID	137	put	2025-12-12	-7d	$102.07	-34%	$34.10 - $36.70	$35.35	55	$194K	56	11	5.09	
+98%
+-5,181	338.61	-0.942	-1.0485	0.0064	0.0062	-0.0036	35.35	Utilities	Utilities - Regulated Electric	94		SL	
+SLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+
+12/12 03:40:00
+	
+OKLO
+ASK	135	put	2025-12-12	-7d	$102.07	-32%	$32.25 - $34.70	$33.50	53	$178K	56	16	3.50	
+96%
+-4,909	347.19	-0.9262	-1.2969	0.0075	0.0075	-0.0035	33.50	Utilities	Utilities - Regulated Electric	94		SL	
+SLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+
+12/12 03:40:00
+	
+OKLO
+ASK	132	put	2025-12-12	-7d	$102.07	-29%	$29.30 - $31.70	$30.55	28	$86K	28	8	3.50	
+100%
+-2,570	332.38	-0.9179	-1.3458	0.0085	0.0081	-0.0034	30.55	Utilities	Utilities - Regulated Electric	94		SL	
+SLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+
+12/12 03:40:00
+	
+OKLO
+ASK	136	put	2025-12-12	-7d	$102.07	-33%	$33.25 - $35.70	$34.55	20	$69K	22	4	5.50	
+91%
+-1,846	360.68	-0.923	-1.3906	0.0075	0.0077	-0.0035	34.55	Utilities	Utilities - Regulated Electric	94		SL	
+SLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+
+12/12 03:40:00
+	
+OKLO
+BID	144	put	2025-12-12	-7d	$102.07	-41%	$41.15 - $43.70	$42.40	39	$165K	43	9	4.78	
+91%
+-3,678	390.64	-0.943	-1.1927	0.0055	0.0061	-0.0038	42.40	Utilities	Utilities - Regulated Electric	94		SL	
+SLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+
+12/12 01:21:02
+	
+OKLO
+ASK	180	put	2026-09-18	273d	$98.79	-82%	$92.95 - $93.15	$93.15	10	$93K	10	2	5.00	
+100%
+-652	87.82	-0.652	-0.0489	0.0049	0.3204	-1.213	93.15	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🛍️ - ASK	
+
+
+12/11 23:39:29
+	
+OKLO
+ASK	60	put	2026-05-15	147d	$97.11	38%	$6.25 - $6.60	$6.60	100	$66K	101	25	4.04	
+100%
+-1,443	101.16	-0.1443	-0.0468	0.0035	0.1437	-0.0875	6.60	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🛍️ - ASK	
+
+
+12/11 22:46:36
+	
+OKLO
+BID	109	call	2025-12-19	0d	$97.51	12%	$2.58 - $2.59	$2.58	500	$129K	506	57	8.88	
+99%
+13,955	112.48	0.2791	-0.3412	0.0207	0.0485	0.0054	2.58	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/11 22:45:57
+	
+OKLO
+ASK	99	call	2025-12-12	-7d	$97.66	1%	$2.13 - $2.55	$2.55	499	$127K	571	207	2.76	
+88%
+22,417	154.62	0.4492	-1.564	0.0501	0.0202	0.0011	2.55	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/11 01:27:10
+	
+OKLO
+BID	102	call	2026-01-23	35d	$100.53	1%	$13.50 - $14.55	$13.50	40	$54K	42	2	21.00	
+100%
+2,217	101.88	0.5542	-0.1599	0.0111	0.138	0.0509	13.50	Utilities	Utilities - Regulated Electric	94		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+
+12/11 01:12:32
+	
+OKLO
+ASK	140	put	2026-01-23	35d	$102.00	-37%	$39.75 - $42.70	$41.82	8	$33K	8	0	-	
+100%
+-620	98.23	-0.7755	-0.1177	0.0086	0.1061	-0.1458	41.82	Utilities	Utilities - Regulated Electric	94		SL	
+SLAN
+🐻 - BEARISH🛍️ - ASK	
+
+
+12/11 00:34:26
+	
+OKLO
+BID	75	call	2026-05-15	147d	$102.66	-27%	$39.30 - $40.55	$39.92	20	$80K	20	13	1.54	
+100%
+1,578	104.29	0.7889	-0.0651	0.0041	0.194	0.1755	39.92	Utilities	Utilities - Regulated Electric	94		ML-O	
+MLET
+🐻 - BEARISH🦴 - BID	
+
+
+12/11 00:19:47
+	
+OKLO
+ASK	118	call	2025-12-19	0d	$101.38	16%	$1.73 - $2.03	$1.94	300	$58K	301	25	12.04	
+100%
+6,376	109.39	0.2125	-0.2809	0.0167	0.0462	0.0048	1.94	Utilities	Utilities - Regulated Electric	94		ML-O	
+MLET
+🐂 - BULLISH🛍️ - ASK	
+
+
+12/10 22:54:55
+	
+OKLO
+BID	101	call	2025-12-19	0d	$99.86	1%	$6.50 - $7.60	$6.75	100	$68K	109	35	3.11	
+97%
+5,117	116.27	0.5117	-0.404	0.0219	0.0625	0.0109	6.75	Utilities	Utilities - Regulated Electric	94		SL	
+SLAN
+🐻 - BEARISH🦴 - BID	
