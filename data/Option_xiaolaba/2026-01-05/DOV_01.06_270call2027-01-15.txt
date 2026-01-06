@@ -1,0 +1,326 @@
+
+
+Options Data
+
+
+Market Data
+
+
+Screeners
+
+
+Stock Data
+
+
+Periscope
+
+
+Calendars
+
+
+Ticker Explorer
+
+
+Portfolio Manager
+
+
+Unusual Tools
+Charting Tool
+★
+Prediction Mkts
+
+
+Data Access/Api
+
+
+Media
+
+
+Misc
+
+
+
+UnusualWhales
+
+K
+
+API
+Changelog6
+Info
+Careers
+
+
+
+
+Filters
+
+My Flow
+Filter
+Select Filter
+
+Live Flow
+
+
+Prev
+
+
+Next
+
+
+Muted
+Results
+250
+Sort
+Time
+
+Columns
+
+
+CSV
+
+Info
+
+
+
+
+
+AI Filter Builder
+
+TIME : 12/26 21:30 - 1/6 04:59
+
+SIDE
+SHOW	HIDE
+Bid 🦴	
+
+
+Mid ↔️	
+
+
+Ask 🛍️	
+
+
+No Side 😐	
+
+
+
+CHAIN ACTIVITY
+Ask %?
+
+-
+
+Bid %?
+
+-
+
+Skew %?
+
+-
+
+
+OPTION TYPE
+SHOW	HIDE
+Calls	
+
+
+Puts	
+
+
+
+EQUITY TYPE
+SHOW	HIDE
+Stocks	
+
+
+ETFs / ETNs	
+
+
+Indices	
+
+
+ADRs	
+
+
+Expiration Dates
+Select...
+Premium?
+
+-
+
+Size?
+
+-
+
+Spot?
+
+-
+
+DTE?
+
+-
+
+Volume?
+
+-
+
+OI?
+
+-
+
+Vol/OI?
+
+-
+
+Mcap/AUM?
+
+-
+
+Stock?
+
+-
+
+Strike?
+
+-
+
+Spread?
+
+-
+
+% OTM?
+
+-
+
+Earnings Report?
+
+-
+
+
+GREEKS
+IV?
+
+-
+
+Delta?
+
+-
+
+Theta?
+
+-
+
+Gamma?
+
+-
+
+
+FLAG TYPE
+SHOW	HIDE
+Sweep	
+
+
+Cross	
+
+
+Floor	
+
+
+Normal	
+
+
+
+EXTRA
+SHOW	HIDE
+China 🇨🇳	
+
+
+Volatility ⚖️	
+
+
+Dividend 🥤	
+
+
+
+OTHERS
+Unusual
+
+Volume > OI
+
+Size > OI
+
+Opening trades
+
+Exclude deep ITM
+
+OPEX only
+
+OTM only
+
+Multi-leg only
+
+Single-leg only
+
+Today's trades only
+* Cannot be enabled with active time range
+
+Hide Expired
+
+Aggregated trades
+
+Show Canceled/Modified
+
+Option Watchlists
+Select...
+Stock Watchlists
+Select...
+Sectors
+Select...
+Industries
+Select...
+Exchanges
+Select...
+Trade Codes
+Select...
+DOV
+$202.27
+3.33%
+Post
+$202.27
+  0.00%
+Volume
+2,026
+Premiums
+903,425
+Bullish
+531,231
+58.80%
+Bearish
+364,139
+40.31%
+Trades paused - filters are set to past date.
+Remove Time Filter
+More
+Time - GMT+8 / UTC-8		Ticker	Side	Contract	DTE	Stock	% OTM	Bid-Ask	Spot	Size	Premium	Volume	OI	Vol/OI	Chain Bid/Ask	Share Eqv	IV %	Delta	Theta	Gamma	Vega	Rho	Theo	Sector	Industry	Earnings	Rule	Legs	Code	Flags	
+Tags
+
+Unusual Whales
+Powered by unusualwhales.com
+
+
+01/06 01:15:56
+	
+DOV
+ASK	270	call	2027-01-15	374d	$202.94	33%	$1.50 - $4.30	$4.00	500	$200K	500	0	-	
+100%
+8,165	25.15	0.1633	-0.0172	0.0048	0.5072	0.2994	4.00	Industrials	Specialty Industrial Machinery	23	Low Historic Volume Floor	SL	
+SLFT
+FLOOR	🐂 - BULLISH🛍️ - ASK	
+
+
+01/06 00:07:18
+	
+DOV
+ASK	210	call	2026-02-20	45d	$201.55	4%	$3.70 - $4.50	$4.30	500	$215K	503	7	71.86	
+99%
+17,553	26.74	0.3511	-0.0775	0.0194	0.2653	0.0838	4.30	Industrials	Specialty Industrial Machinery	23	Low Historic Volume Floor	ML-O	
+MLFT
+FLOOR	🐂 - BULLISH🛍️ - ASK	

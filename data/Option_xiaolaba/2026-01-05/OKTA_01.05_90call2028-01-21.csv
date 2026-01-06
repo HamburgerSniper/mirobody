@@ -1,0 +1,2 @@
+source_file,date,time,ticker,side,strike,option_type,expiry,dte,price,bid_ask_range,spot,size,premium,volume,oi,vol_oi,chain_bid_ask,share_eqv,iv_pct,delta,theta,gamma,vega,rho,theo,sector,industry,earnings,rule,contract
+OKTA_01.05_90call2028-01-21.txt,2026-01-05,23:57:58,OKTA,ASK,90,call,2028-01-21,745d,$88.26,$23.00 - $26.05,$26.15,100,$262K,151,38,3.97,83%,"6,439",54.11,0.6439,-0.0173,0.0055,0.4703,0.6271,26.15,Technology,Software Infrastructure,55,Repeated Hits Ascending Fill,90 call 2028-01-21

@@ -1,0 +1,366 @@
+
+
+Options Data
+
+
+Market Data
+
+
+Screeners
+
+
+Stock Data
+
+
+Periscope
+
+
+Calendars
+
+
+Ticker Explorer
+
+
+Portfolio Manager
+
+
+Unusual Tools
+Charting Tool
+★
+Prediction Mkts
+
+
+Data Access/Api
+
+
+Media
+
+
+Misc
+
+
+
+UnusualWhales
+
+K
+
+API
+Changelog6
+Info
+Careers
+
+
+
+
+Filters
+
+My Flow
+Filter
+Select Filter
+
+Live Flow
+
+
+Prev
+
+
+Next
+
+
+Muted
+Results
+250
+Sort
+Time
+
+Columns
+
+
+CSV
+
+Info
+
+
+
+
+
+AI Filter Builder
+
+TIME : 12/26 21:30 - 1/6 04:59
+
+SIDE
+SHOW	HIDE
+Bid 🦴	
+
+
+Mid ↔️	
+
+
+Ask 🛍️	
+
+
+No Side 😐	
+
+
+
+CHAIN ACTIVITY
+Ask %?
+
+-
+
+Bid %?
+
+-
+
+Skew %?
+
+-
+
+
+OPTION TYPE
+SHOW	HIDE
+Calls	
+
+
+Puts	
+
+
+
+EQUITY TYPE
+SHOW	HIDE
+Stocks	
+
+
+ETFs / ETNs	
+
+
+Indices	
+
+
+ADRs	
+
+
+Expiration Dates
+Select...
+Premium?
+
+-
+
+Size?
+
+-
+
+Spot?
+
+-
+
+DTE?
+
+-
+
+Volume?
+
+-
+
+OI?
+
+-
+
+Vol/OI?
+
+-
+
+Mcap/AUM?
+
+-
+
+Stock?
+
+-
+
+Strike?
+
+-
+
+Spread?
+
+-
+
+% OTM?
+
+-
+
+Earnings Report?
+
+-
+
+
+GREEKS
+IV?
+
+-
+
+Delta?
+
+-
+
+Theta?
+
+-
+
+Gamma?
+
+-
+
+
+FLAG TYPE
+SHOW	HIDE
+Sweep	
+
+
+Cross	
+
+
+Floor	
+
+
+Normal	
+
+
+
+EXTRA
+SHOW	HIDE
+China 🇨🇳	
+
+
+Volatility ⚖️	
+
+
+Dividend 🥤	
+
+
+
+OTHERS
+Unusual
+
+Volume > OI
+
+Size > OI
+
+Opening trades
+
+Exclude deep ITM
+
+OPEX only
+
+OTM only
+
+Multi-leg only
+
+Single-leg only
+
+Today's trades only
+* Cannot be enabled with active time range
+
+Hide Expired
+
+Aggregated trades
+
+Show Canceled/Modified
+
+Option Watchlists
+Select...
+Stock Watchlists
+Select...
+Sectors
+Select...
+Industries
+Select...
+Exchanges
+Select...
+Trade Codes
+Select...
+NVMI
+$382.88
+10.23%
+Post
+$386.00
+  0.81%
+Volume
+503
+Premiums
+837,808
+Bullish
+554,514
+66.19%
+Bearish
+225,829
+26.95%
+Trades paused - filters are set to past date.
+Remove Time Filter
+More
+Time - GMT+8 / UTC-8		Ticker	Side	Contract	DTE	Stock	% OTM	Bid-Ask	Spot	Size	Premium	Volume	OI	Vol/OI	Chain Bid/Ask	Share Eqv	IV %	Delta	Theta	Gamma	Vega	Rho	Theo	Sector	Industry	Earnings	Rule	Legs	Code	Flags	
+Tags
+
+Unusual Whales
+Powered by unusualwhales.com
+
+
+01/06 00:46:22
+	
+NVMI
+ASK	440	call	2026-02-20	45d	$381.30	15%	$7.50 - $10.50	$9.90	125	$124K	125	4	31.25	
+100%
+3,158	52.97	0.2527	-0.2495	0.0045	0.4326	0.1089	9.90	Technology	Semiconductor Equipment & Materials	37	Low Historic Volume Floor	SL	
+SLFT
+FLOOR	🐂 - BULLISH🛍️ - ASK	
+
+
+01/03 04:04:49
+	
+NVMI
+ASK	380	call	2026-02-20	45d	$348.39	9%	$12.40 - $14.70	$14.60	250	$365K	251	8	31.38	
+100%
+8,977	51.84	0.3591	-0.253	0.0056	0.4771	0.1483	14.60	Technology	Semiconductor Equipment & Materials	37		SL	
+SLFT
+FLOOR	🐂 - BULLISH🛍️ - ASK	
+
+
+01/01 00:46:08
+	
+NVMI
+BID	330	put	2026-12-18	346d	$334.63	1%	$56.00 - $61.00	$57.81	10	$58K	10	2	5.00	
+100%
+-395	46.97	-0.3949	-0.083	0.0025	1.2652	-1.8318	57.81	Technology	Semiconductor Equipment & Materials	37		ML-O	
+MLET
+🐂 - BULLISH🦴 - BID	
+
+
+01/01 00:46:08
+	
+NVMI
+ASK	320	put	2026-12-18	346d	$334.63	4%	$51.00 - $56.00	$54.19	10	$54K	10	0	-	
+100%
+-368	48.59	-0.3677	-0.0841	0.0024	1.2382	-1.7092	54.19	Technology	Semiconductor Equipment & Materials	37		ML-O	
+MLET
+🐻 - BEARISH🛍️ - ASK	
+
+
+01/01 00:46:08
+	
+NVMI
+BID	330	call	2026-12-18	346d	$334.63	-1%	$72.50 - $76.00	$73.57	10	$74K	10	6	1.67	
+100%
+618	55.10	0.6184	-0.0991	0.0021	1.2528	1.2862	73.57	Technology	Semiconductor Equipment & Materials	37		ML-O	
+MLET
+🐻 - BEARISH🦴 - BID	
+
+
+01/01 00:46:08
+	
+NVMI
+ASK	340	call	2026-12-18	346d	$334.63	2%	$67.00 - $72.00	$70.19	10	$70K	10	0	-	
+100%
+598	55.54	0.5981	-0.1013	0.0021	1.2711	1.2533	70.19	Technology	Semiconductor Equipment & Materials	37		ML-O	
+MLET
+🐂 - BULLISH🛍️ - ASK	
