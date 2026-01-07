@@ -8,3 +8,4 @@ __pycache__/
 .cursor/
 data/real_time_daban_indicator/
 data/twoban/
+backtest_system/
