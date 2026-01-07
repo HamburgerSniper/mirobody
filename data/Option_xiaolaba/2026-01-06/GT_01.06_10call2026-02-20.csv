@@ -1,0 +1,2 @@
+source_file,date,time,ticker,side,strike,option_type,expiry,dte,price,bid_ask_range,spot,size,premium,volume,oi,vol_oi,chain_bid_ask,share_eqv,iv_pct,delta,theta,gamma,vega,rho,theo,sector,industry,earnings,rule,contract
+GT_01.06_10call2026-02-20.txt,2026-01-06,23:48:21,GT,ASK,10,call,2026-02-20,44d,$8.87,$0.20 - $0.30,$0.30,"8,000",$240K,"8,002",674,11.87,100%,"241,594",55.34,0.302,-0.0067,0.2023,0.0109,0.0029,0.30,Consumer Cyclical,Automotive,36,Low Historic Volume Floor,10 call 2026-02-20

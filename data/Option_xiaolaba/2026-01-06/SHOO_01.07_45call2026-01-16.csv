@@ -1,0 +1,3 @@
+source_file,date,time,ticker,side,strike,option_type,expiry,dte,price,bid_ask_range,spot,size,premium,volume,oi,vol_oi,chain_bid_ask,share_eqv,iv_pct,delta,theta,gamma,vega,rho,theo,sector,industry,earnings,rule,contract
+SHOO_01.07_45call2026-01-16.txt,2026-01-07,04:36:12,SHOO,ASK,45,call,2026-01-16,9d,$43.85,$0.80 - $1.05,$1.05,999,$105K,"1,017",816,1.25,99%,"40,083",53.11,0.4012,-0.0746,0.1003,0.0281,0.0045,1.05,Consumer Cyclical,Footwear & Accessories,49,Low Historic Volume Floor,45 call 2026-01-16
+SHOO_01.07_45call2026-01-16.txt,2026-01-07,00:46:28,SHOO,ASK,40,put,2026-01-16,9d,$43.47,$0.15 - $0.40,$0.40,"1,999",$80K,"2,000",138,14.49,100%,"-34,930",56.57,-0.1747,-0.0524,0.0633,0.0185,-0.0022,0.40,Consumer Cyclical,Footwear & Accessories,49,,40 put 2026-01-16

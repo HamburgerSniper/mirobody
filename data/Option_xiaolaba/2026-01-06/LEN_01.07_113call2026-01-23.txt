@@ -1,0 +1,397 @@
+
+Options Data
+
+
+Market Data
+
+
+Screeners
+
+
+Stock Data
+
+
+Periscope
+
+
+Calendars
+
+
+Ticker Explorer
+
+
+Portfolio Manager
+
+
+Unusual Tools
+Charting Tool
+★
+Predictions
+
+
+Data Access/Api
+
+
+Media
+
+
+Misc
+
+
+
+UnusualWhales
+
+K
+
+API
+Changelog6
+Info
+Careers
+
+
+
+
+Filters
+
+My Flow
+Filter
+Select Filter
+
+Live Flow
+
+Prev
+
+Next
+
+Muted
+Results
+250
+Sort
+Time
+
+Columns
+
+CSV
+
+Info
+
+
+
+
+
+AI Filter Builder
+
+TIME : 12/27 21:30 - 1/7 04:59
+
+SIDE
+SHOW	HIDE
+Bid 🦴	
+
+
+Mid ↔️	
+
+
+Ask 🛍️	
+
+
+No Side 😐	
+
+
+
+CHAIN ACTIVITY
+Ask %?
+
+-
+
+Bid %?
+
+-
+
+Skew %?
+
+-
+
+
+OPTION TYPE
+SHOW	HIDE
+Calls	
+
+
+Puts	
+
+
+
+EQUITY TYPE
+SHOW	HIDE
+Stocks	
+
+
+ETFs / ETNs	
+
+
+Indices	
+
+
+ADRs	
+
+
+Expiration Dates
+Select...
+Premium?
+
+-
+
+Size?
+
+-
+
+Spot?
+
+-
+
+DTE?
+
+-
+
+Volume?
+
+-
+
+OI?
+
+-
+
+Vol/OI?
+
+-
+
+Mcap/AUM?
+
+-
+
+Stock?
+
+-
+
+Strike?
+
+-
+
+Spread?
+
+-
+
+% OTM?
+
+-
+
+Earnings Report?
+
+-
+
+
+GREEKS
+IV?
+
+-
+
+Delta?
+
+-
+
+Theta?
+
+-
+
+Gamma?
+
+-
+
+
+FLAG TYPE
+SHOW	HIDE
+Sweep	
+
+
+Cross	
+
+
+Floor	
+
+
+Normal	
+
+
+
+EXTRA
+SHOW	HIDE
+China 🇨🇳	
+
+
+Volatility ⚖️	
+
+
+Dividend 🥤	
+
+
+
+OTHERS
+Unusual
+
+Volume > OI
+
+Size > OI
+
+Opening trades
+
+Exclude deep ITM
+
+OPEX only
+
+OTM only
+
+Multi-leg only
+
+Single-leg only
+
+Today's trades only
+* Cannot be enabled with active time range
+
+Hide Expired
+
+Aggregated trades
+
+Show Canceled/Modified
+
+Option Watchlists
+Select...
+Stock Watchlists
+Select...
+Sectors
+Select...
+Industries
+Select...
+Exchanges
+Select...
+Trade Codes
+Select...
+LEN
+$106.36
+0.91%
+Post
+$106.12
+  -0.23%
+Volume
+17,392
+Premiums
+2.65M
+Bullish
+1.37M
+51.98%
+Bearish
+978,196
+36.98%
+Trades paused - filters are set to past date.
+Remove Time Filter
+More
+Time - GMT+8 / UTC-8		Ticker	Side	Contract	DTE	Stock	% OTM	Bid-Ask	Spot	Size	Premium	Volume	OI	Vol/OI	Chain Bid/Ask	Share Eqv	IV %	Delta	Theta	Gamma	Vega	Rho	Theo	Sector	Industry	Earnings	Rule	Legs	Code	Flags	
+Tags
+
+Unusual Whales
+Powered by unusualwhales.com
+
+01/07 03:57:47
+LEN
+ASK	113	call	2026-01-23	16d	$106.15	6%	$0.85 - $1.20	$1.20	840	$101K	1,111	13	85.46	
+100%
+20,136	38.66	0.2397	-0.081	0.0351	0.0712	0.0113	1.20	Consumer Cyclical	Residential Construction	71	Repeated Hits Ascending Fill	SL	
+SLAI
+SWEEP	🐂 - BULLISH🛍️ - ASK	
+
+01/06 02:31:31
+LEN
+ASK	150	call	2027-01-15	373d	$105.07	43%	$3.70 - $3.90	$3.90	270	$105K	270	145	1.86	
+100%
+5,747	35.65	0.2128	-0.0148	0.0077	0.3094	0.1897	3.90	Consumer Cyclical	Residential Construction	71		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+01/02 23:49:36
+LEN
+ASK	100	put	2026-02-20	44d	$103.19	3%	$3.40 - $3.70	$3.60	479	$172K	538	359	1.50	
+93%
+-18,002	34.01	-0.3758	-0.0496	0.0295	0.1435	-0.0569	3.60	Consumer Cyclical	Residential Construction	71		SL	
+AUTO
+🐻 - BEARISH🛍️ - ASK	
+
+01/01 03:38:44
+LEN
+BID	100	call	2026-09-18	254d	$103.28	-3%	$14.20 - $16.10	$14.97	99	$148K	99	14	7.07	
+100%
+5,997	38.58	0.6057	-0.0252	0.0114	0.3361	0.3403	14.97	Consumer Cyclical	Residential Construction	71		ML-O	
+MLET
+🐻 - BEARISH🦴 - BID	
+
+12/31 03:46:48
+LEN
+ASK	120	put	2026-01-09	2d	$103.99	-15%	$15.00 - $17.60	$16.60	40	$66K	42	21	2.00	
+95%
+-3,558	67.61	-0.8894	-0.1095	0.0162	0.0325	-0.0299	16.60	Consumer Cyclical	Residential Construction	71		SL	
+SLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+12/31 03:46:48
+LEN
+BID	111	put	2026-01-02	-5d	$103.99	-7%	$6.50 - $8.30	$7.30	70	$51K	72	32	2.25	
+97%
+-6,214	57.98	-0.8877	-0.1735	0.0349	0.018	-0.0082	7.30	Consumer Cyclical	Residential Construction	71		SL	
+SLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+12/31 03:46:48
+LEN
+BID	112	put	2026-01-02	-5d	$103.99	-8%	$7.50 - $9.30	$8.30	50	$42K	50	25	2.00	
+100%
+-4,479	63.59	-0.8958	-0.1803	0.0302	0.017	-0.0083	8.30	Consumer Cyclical	Residential Construction	71		SL	
+SLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+12/31 03:46:48
+LEN
+ASK	115	put	2026-01-02	-5d	$103.99	-11%	$10.40 - $12.50	$11.50	40	$46K	41	18	2.28	
+98%
+-3,520	91.29	-0.8799	-0.2868	0.0233	0.0189	-0.0085	11.50	Consumer Cyclical	Residential Construction	71		SL	
+SLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+12/30 22:31:26
+LEN
+BID	105	call	2026-12-18	345d	$103.25	2%	$14.80 - $15.90	$14.80	99	$147K	99	4	24.75	
+100%
+5,543	38.27	0.5599	-0.022	0.0101	0.4005	0.416	14.80	Consumer Cyclical	Residential Construction	71		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+12/30 00:09:35
+LEN
+BID	105	put	2026-08-21	226d	$104.02	-1%	$12.00 - $12.30	$12.00	39	$47K	40	28	1.43	
+100%
+-1,775	34.82	-0.4552	-0.0241	0.0136	0.3309	-0.3821	12.00	Consumer Cyclical	Residential Construction	71		SL	
+AUTO
+🐂 - BULLISH🦴 - BID	
+
+12/29 23:01:46
+LEN
+ASK	145	call	2028-01-21	744d	$104.87	38%	$8.50 - $12.90	$11.00	50	$55K	50	7	7.14	
+100%
+1,860	37.29	0.3721	-0.0143	0.0067	0.5697	0.578	11.00	Consumer Cyclical	Residential Construction	71		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+12/29 22:53:16
+LEN
+BID	80	put	2026-03-20	72d	$104.98	24%	$0.65 - $1.05	$0.65	550	$36K	550	108	5.09	
+100%
+-3,690	41.26	-0.0671	-0.0163	0.0064	0.0643	-0.0171	0.65	Consumer Cyclical	Residential Construction	71		SL	
+AUTO
+🐂 - BULLISH🦴 - BID	

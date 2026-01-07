@@ -1,0 +1,605 @@
+
+Options Data
+
+
+Market Data
+
+
+Screeners
+
+
+Stock Data
+
+
+Periscope
+
+
+Calendars
+
+
+Ticker Explorer
+
+
+Portfolio Manager
+
+
+Unusual Tools
+Charting Tool
+★
+Predictions
+
+
+Data Access/Api
+
+
+Media
+
+
+Misc
+
+
+
+UnusualWhales
+
+K
+
+API
+Changelog6
+Info
+Careers
+
+
+
+
+Filters
+
+My Flow
+Filter
+Select Filter
+
+Live Flow
+
+Prev
+
+Next
+
+Muted
+Results
+250
+Sort
+Time
+
+Columns
+
+CSV
+
+Info
+
+
+
+
+
+AI Filter Builder
+
+TIME : 12/27 21:30 - 1/7 04:59
+
+SIDE
+SHOW	HIDE
+Bid 🦴	
+
+
+Mid ↔️	
+
+
+Ask 🛍️	
+
+
+No Side 😐	
+
+
+
+CHAIN ACTIVITY
+Ask %?
+
+-
+
+Bid %?
+
+-
+
+Skew %?
+
+-
+
+
+OPTION TYPE
+SHOW	HIDE
+Calls	
+
+
+Puts	
+
+
+
+EQUITY TYPE
+SHOW	HIDE
+Stocks	
+
+
+ETFs / ETNs	
+
+
+Indices	
+
+
+ADRs	
+
+
+Expiration Dates
+Select...
+Premium?
+
+-
+
+Size?
+
+-
+
+Spot?
+
+-
+
+DTE?
+
+-
+
+Volume?
+
+-
+
+OI?
+
+-
+
+Vol/OI?
+
+-
+
+Mcap/AUM?
+
+-
+
+Stock?
+
+-
+
+Strike?
+
+-
+
+Spread?
+
+-
+
+% OTM?
+
+-
+
+Earnings Report?
+
+-
+
+
+GREEKS
+IV?
+
+-
+
+Delta?
+
+-
+
+Theta?
+
+-
+
+Gamma?
+
+-
+
+
+FLAG TYPE
+SHOW	HIDE
+Sweep	
+
+
+Cross	
+
+
+Floor	
+
+
+Normal	
+
+
+
+EXTRA
+SHOW	HIDE
+China 🇨🇳	
+
+
+Volatility ⚖️	
+
+
+Dividend 🥤	
+
+
+
+OTHERS
+Unusual
+
+Volume > OI
+
+Size > OI
+
+Opening trades
+
+Exclude deep ITM
+
+OPEX only
+
+OTM only
+
+Multi-leg only
+
+Single-leg only
+
+Today's trades only
+* Cannot be enabled with active time range
+
+Hide Expired
+
+Aggregated trades
+
+Show Canceled/Modified
+
+Option Watchlists
+Select...
+Stock Watchlists
+Select...
+Sectors
+Select...
+Industries
+Select...
+Exchanges
+Select...
+Trade Codes
+Select...
+SNOW
+$234.53
+4.53%
+Post
+$234.00
+  -0.23%
+Volume
+35,494
+Premiums
+27.61M
+Bullish
+13.83M
+50.10%
+Bearish
+11.71M
+42.41%
+Trades paused - filters are set to past date.
+Remove Time Filter
+More
+Time - GMT+8 / UTC-8		Ticker	Side	Contract	DTE	Stock	% OTM	Bid-Ask	Spot	Size	Premium	Volume	OI	Vol/OI	Chain Bid/Ask	Share Eqv	IV %	Delta	Theta	Gamma	Vega	Rho	Theo	Sector	Industry	Earnings	Rule	Legs	Code	Flags	
+Tags
+
+Unusual Whales
+Powered by unusualwhales.com
+
+01/07 04:57:52
+SNOW
+ASK	240	call	2026-02-06	30d	$234.29	2%	$8.25 - $8.30	$8.30	194	$161K	277	83	3.34	
+93%
+8,546	39.56	0.4405	-0.1724	0.0146	0.2694	0.0806	8.30	Technology	Software	49	Repeated Hits	SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+01/07 04:42:08
+SNOW
+ASK	300	put	2026-01-16	9d	$233.07	-29%	$64.90 - $69.80	$67.47	150	$1.01M	270	26	10.38	
+56%
+-14,354	85.34	-0.957	-0.1496	0.0028	0.0353	-0.0796	67.47	Technology	Software	49		ML-O	
+MFSL
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+01/07 04:42:08
+SNOW
+ASK	270	put	2026-01-16	9d	$233.07	-16%	$35.15 - $40.70	$38.07	50	$190K	61	17	3.59	
+82%
+-4,503	66.29	-0.9006	-0.2225	0.0068	0.0674	-0.0679	38.07	Technology	Software	49		ML-O	
+MFSL
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+01/07 04:21:30
+SNOW
+BID	300	put	2026-01-16	9d	$233.62	-28%	$64.90 - $69.80	$64.94	120	$779K	120	26	4.62	
+100%
+-10,253	129.89	-0.8544	-0.5731	0.0046	0.0884	-0.0738	69.80	Technology	Software	49		ML-O	
+MLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+01/07 03:35:47
+SNOW
+BID	240	call	2026-02-13	37d	$231.90	3%	$8.40 - $8.50	$8.40	192	$161K	364	5	72.80	
+90%
+8,050	39.54	0.4193	-0.1526	0.0132	0.2924	0.0925	8.40	Technology	Software	49		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+01/07 01:38:04
+SNOW
+BID	240	call	2026-02-13	37d	$229.85	4%	$7.43 - $7.50	$7.45	134	$100K	169	5	33.80	
+79%
+5,235	39.12	0.3907	-0.147	0.0132	0.2847	0.0857	7.45	Technology	Software	49	Repeated Hits	SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+01/06 04:25:53
+SNOW
+ASK	270	put	2026-01-16	9d	$224.99	-20%	$41.55 - $47.90	$45.08	100	$451K	180	17	10.59	
+100%
+-9,870	46.32	-0.987	-0.0266	0.0018	0.013	-0.0805	45.08	Technology	Software	49		ML-O	
+MFSL
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+01/06 04:18:35
+SNOW
+BID	280	put	2026-01-16	9d	$224.96	-24%	$51.75 - $58.80	$54.09	150	$811K	150	148	1.01	
+100%
+-12,485	118.24	-0.8324	-0.5256	0.0054	0.0979	-0.0742	58.80	Technology	Software	49		ML-O	
+MLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+01/06 04:18:35
+SNOW
+ASK	270	put	2026-01-16	9d	$224.96	-20%	$41.55 - $47.90	$47.90	80	$383K	80	17	4.71	
+100%
+-6,747	96.27	-0.8434	-0.4092	0.0064	0.0937	-0.0716	47.90	Technology	Software	49		ML-O	
+MLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+01/06 03:42:54
+SNOW
+ASK	110	call	2026-09-18	254d	$224.87	-51%	$117.55 - $119.65	$119.65	11	$132K	11	9	1.22	
+100%
+1,031	69.06	0.9369	-0.0322	0.001	0.2335	0.6384	119.65	Technology	Software	49		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+01/06 02:16:21
+SNOW
+BID	200	call	2026-01-09	2d	$224.84	-11%	$25.00 - $26.60	$25.00	37	$93K	41	9	4.56	
+100%
+3,595	59.73	0.9715	-0.1152	0.0046	0.0153	0.0212	25.00	Technology	Software	49		SL	
+AUTO
+🐻 - BEARISH🦴 - BID	
+
+01/05 23:19:34
+SNOW
+BID	190	call	2026-08-21	226d	$223.70	-15%	$50.15 - $54.45	$50.16	20	$100K	20	1	20.00	
+100%
+1,473	46.61	0.7364	-0.0599	0.004	0.5776	0.7156	50.16	Technology	Software	49		ML-O	
+MLET
+🐻 - BEARISH🦴 - BID	
+
+01/03 03:47:13
+SNOW
+ASK	240	call	2026-08-21	226d	$217.27	10%	$23.55 - $24.55	$24.55	41	$101K	41	7	5.86	
+100%
+1,944	48.01	0.4741	-0.0721	0.0048	0.6881	0.4965	24.55	Technology	Software	49		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+01/03 03:47:04
+SNOW
+ASK	230	call	2026-08-21	226d	$217.27	6%	$27.35 - $28.40	$28.40	41	$116K	41	36	1.14	
+100%
+2,132	48.56	0.5201	-0.073	0.0047	0.6887	0.5353	28.40	Technology	Software	49		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+01/03 03:36:21
+SNOW
+ASK	280	put	2026-01-16	9d	$217.24	-29%	$59.65 - $67.30	$63.65	850	$5.41M	850	155	5.48	
+100%
+-79,563	80.90	-0.936	-0.1531	0.0036	0.0533	-0.1024	63.65	Technology	Software	49		SL	
+SLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+01/03 03:36:21
+SNOW
+BID	260	put	2026-01-16	9d	$217.24	-20%	$39.60 - $47.15	$43.25	650	$2.81M	660	128	5.16	
+98%
+-61,555	54.92	-0.947	-0.0893	0.0046	0.046	-0.0955	43.25	Technology	Software	49		SL	
+SLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+01/03 03:36:21
+SNOW
+ASK	270	put	2026-01-16	9d	$217.24	-24%	$50.75 - $57.45	$54.45	75	$408K	75	17	4.41	
+100%
+-6,700	83.66	-0.8934	-0.2329	0.0052	0.0782	-0.0953	54.45	Technology	Software	49		SL	
+SLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+01/03 00:24:29
+SNOW
+BID	165	call	2026-02-20	44d	$216.94	-24%	$51.25 - $54.75	$52.90	20	$106K	21	18	1.17	
+100%
+1,895	48.83	0.9475	-0.0433	0.0028	0.0853	0.2049	52.90	Technology	Software	49		ML-O	
+MLET
+🐻 - BEARISH🦴 - BID	
+
+01/02 23:27:23
+SNOW
+BID	222.5	call	2026-01-09	2d	$216.59	3%	$2.09 - $2.39	$2.17	1,000	$217K	1,020	71	14.37	
+99%
+31,029	37.29	0.3103	-0.2822	0.0316	0.1059	0.0125	2.17	Technology	Software	49		ML-O	
+MLFT
+FLOOR	🐻 - BEARISH🦴 - BID	
+
+01/01 04:14:44
+SNOW
+ASK	280	put	2026-01-16	9d	$219.97	-27%	$55.80 - $63.00	$59.87	1,420	$8.5M	2,645	155	17.06	
+100%
+-121,919	97.94	-0.8586	-0.3151	0.005	0.1032	-0.1104	63.00	Technology	Software	49		ML-O	
+MFSL
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+01/01 04:14:44
+SNOW
+BID	260	put	2026-01-16	9d	$219.97	-18%	$38.15 - $41.60	$39.66	1,030	$4.08M	1,830	128	14.30	
+56%
+-90,953	63.52	-0.883	-0.1788	0.0067	0.0905	-0.1034	41.60	Technology	Software	49		ML-O	
+MFSL
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+01/01 03:50:32
+SNOW
+ASK	260	put	2026-01-16	9d	$220.24	-18%	$37.50 - $41.60	$40.60	800	$3.25M	800	128	6.25	
+100%
+-73,664	54.02	-0.9208	-0.114	0.0059	0.068	-0.1067	40.60	Technology	Software	49		SL	
+SLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+01/01 03:50:32
+SNOW
+BID	270	put	2026-01-16	9d	$220.24	-23%	$45.20 - $52.80	$48.40	175	$847K	175	17	10.29	
+100%
+-14,773	88.11	-0.8442	-0.3028	0.0059	0.1103	-0.1046	52.80	Technology	Software	49		SL	
+SLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+01/01 03:50:32
+SNOW
+ASK	280	put	2026-01-16	9d	$220.24	-27%	$55.20 - $63.00	$59.85	1,225	$7.33M	1,225	155	7.90	
+100%
+-120,871	50.50	-0.9867	-0.0239	0.0015	0.0157	-0.1215	59.85	Technology	Software	49		SL	
+SLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+01/01 01:15:32
+SNOW
+BID	197.5	call	2026-01-16	9d	$220.60	-10%	$23.90 - $24.65	$24.22	24	$58K	24	0	-	
+100%
+2,141	44.40	0.8919	-0.1196	0.0091	0.0858	0.0756	24.22	Technology	Software	49		ML-O	
+MLET
+🐻 - BEARISH🦴 - BID	
+
+12/31 04:43:06
+SNOW
+BID	260	put	2026-01-16	9d	$222.28	-17%	$36.25 - $40.00	$36.25	740	$2.68M	740	135	5.48	
+100%
+-62,909	65.55	-0.8501	-0.2148	0.0074	0.1118	-0.1066	40.00	Technology	Software	49		ML-O	
+MLFT
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+12/31 03:33:09
+SNOW
+ASK	270	put	2026-01-16	9d	$222.72	-21%	$44.00 - $50.40	$47.29	800	$3.78M	800	76	10.53	
+100%
+-79,604	34.09	-0.995	-0.006	0.0009	0.0069	-0.1252	47.29	Technology	Software	49		ML-O	
+MLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+12/31 03:33:09
+SNOW
+ASK	280	put	2026-01-16	9d	$222.72	-26%	$54.25 - $60.25	$57.29	800	$4.58M	800	155	5.16	
+100%
+-79,648	39.82	-0.9956	-0.0063	0.0007	0.0062	-0.13	57.29	Technology	Software	49		ML-O	
+MLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+12/31 02:20:16
+SNOW
+ASK	210	call	2026-08-21	226d	$222.85	-6%	$39.35 - $41.00	$41.00	8	$33K	8	0	-	
+100%
+510	49.53	0.6378	-0.0716	0.0042	0.6689	0.6484	41.00	Technology	Software	49		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+12/31 00:20:04
+SNOW
+ASK	230	call	2026-02-06	30d	$223.65	3%	$7.35 - $8.30	$7.83	50	$39K	51	3	17.00	
+100%
+2,150	36.64	0.4301	-0.1371	0.0149	0.2834	0.092	7.83	Technology	Software	49		ML-O	
+MLET
+🐂 - BULLISH🛍️ - ASK	
+
+12/30 23:53:41
+SNOW
+BID	227.5	put	2026-01-09	2d	$223.46	-2%	$6.85 - $7.25	$7.04	56	$39K	56	43	1.30	
+100%
+-3,486	31.94	-0.6224	-0.2239	0.0322	0.1406	-0.04	7.04	Technology	Software	49		ML-O	
+MLET
+🐂 - BULLISH🦴 - BID	
+
+12/30 22:56:12
+SNOW
+ASK	215	put	2026-01-23	16d	$223.64	4%	$4.00 - $4.25	$4.25	100	$43K	109	48	2.27	
+95%
+-3,136	34.91	-0.3136	-0.1476	0.0177	0.2033	-0.0489	4.25	Technology	Software	49		ML-O	
+MLET
+🐻 - BEARISH🛍️ - ASK	
+
+12/30 04:34:03
+SNOW
+BID	260	put	2026-01-02	-5d	$223.45	-16%	$32.95 - $39.90	$36.32	20	$73K	20	5	4.00	
+100%
+-1,625	149.82	-0.8126	-1.1781	0.0077	0.0629	-0.0243	39.90	Technology	Software	49		ML-O	
+MFSL
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+12/30 04:34:03
+SNOW
+BID	255	put	2026-01-02	-5d	$223.45	-14%	$30.20 - $34.15	$32.13	10	$32K	10	3	3.33	
+100%
+-930	83.09	-0.9299	-0.326	0.0069	0.0315	-0.0263	32.13	Technology	Software	49		ML-O	
+MFSL
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+12/30 04:34:03
+SNOW
+BID	265	put	2026-01-02	-5d	$223.45	-19%	$37.75 - $44.90	$41.21	20	$82K	20	3	6.67	
+100%
+-1,645	161.33	-0.8226	-1.2258	0.0069	0.0608	-0.0251	44.90	Technology	Software	49		ML-O	
+MFSL
+FLOOR	🐂 - BULLISH🦴 - BID	
+
+12/30 04:21:53
+SNOW
+ASK	280	call	2027-03-19	436d	$223.64	25%	$29.15 - $29.95	$29.95	19	$57K	19	13	1.46	
+100%
+843	48.76	0.4435	-0.054	0.0033	0.9752	0.8442	29.95	Technology	Software	49		SL	
+AUTO
+🐂 - BULLISH🛍️ - ASK	
+
+12/30 04:14:26
+SNOW
+ASK	280	put	2026-01-16	9d	$223.40	-25%	$52.70 - $60.05	$60.05	490	$2.94M	490	155	3.16	
+100%
+-41,251	92.06	-0.8419	-0.3055	0.0053	0.1198	-0.1224	60.05	Technology	Software	49		ML-O	
+MLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	
+
+12/30 04:14:26
+SNOW
+ASK	270	put	2026-01-16	9d	$223.40	-21%	$42.50 - $51.10	$50.05	360	$1.8M	360	76	4.74	
+100%
+-29,808	82.20	-0.828	-0.288	0.0063	0.1265	-0.1159	50.05	Technology	Software	49		ML-O	
+MLFT
+FLOOR	🐻 - BEARISH🛍️ - ASK	

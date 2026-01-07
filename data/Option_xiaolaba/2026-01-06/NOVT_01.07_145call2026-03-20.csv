@@ -1,0 +1,2 @@
+source_file,date,time,ticker,side,strike,option_type,expiry,dte,price,bid_ask_range,spot,size,premium,volume,oi,vol_oi,chain_bid_ask,share_eqv,iv_pct,delta,theta,gamma,vega,rho,theo,sector,industry,earnings,rule,contract
+NOVT_01.07_145call2026-03-20.txt,2026-01-07,04:31:21,NOVT,ASK,145,call,2026-03-20,72d,$122.57,$0.05 - $4.20,$3.00,600,$180K,600,0,-,100%,"13,845",44.81,0.2308,-0.0513,0.0124,0.1667,0.0506,3.00,Technology,Scientific & Technical Instruments,48,Low Historic Volume Floor,145 call 2026-03-20
