@@ -1,0 +1,2 @@
+source_file,date,time,ticker,side,strike,option_type,expiry,dte,price,bid_ask_range,spot,size,premium,volume,oi,vol_oi,chain_bid_ask,share_eqv,iv_pct,delta,theta,gamma,vega,rho,theo,sector,industry,earnings,rule,contract
+AUR_01.07_6call2026-06-18.txt,2026-01-07,23:36:01,AUR,ASK,6,call,2026-06-18,161d,$4.60,$0.50 - $0.55,$0.55,"2,471",$136K,"2,575",455,5.66,100%,"101,284",80.47,0.4099,-0.003,0.1578,0.0119,0.0059,0.55,Technology,Information Technology Services,34,Repeated Hits Ascending Fill,6 call 2026-06-18
