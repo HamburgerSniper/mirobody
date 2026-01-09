@@ -561,6 +561,402 @@ class ThsDabanService:
             logging.warning(f"Yesterday premium analysis failed: {e}")
             return {"描述": "计算失败"}
 
+    async def get_market_sentiment_report(self, date: str) -> Dict[str, Any]:
+        """
+        获取市场涨停复盘报告（紧凑格式，适合LLM）
+        类似"涨停之王"复盘图的数据结构
+        
+        Args:
+            date: 查询日期，格式 'YYYY-MM-DD' 或 'YYYYMMDD'
+            
+        Returns:
+            Dict: {
+                "date": "20260108",
+                "summary": "涨停92家 最高10板 连板26家 昨日最高板胜通能源(14板)今日未板",
+                "ladder": {
+                    "10板": ["锋龙股份(10板,09:25)", ...],
+                    "4板": ["创新医疗(4板,09:25)", ...],
+                    "3板": [...],
+                    "2板": [...],
+                    "首板": [...]
+                },
+                "hot_sectors": ["商业航天(39)", "军工(32)", "人工智能(27)", ...]
+            }
+            
+        Note: 
+            - summary: 客观数据，包含涨停数、最高板、连板数、昨日最高板今日接力情况
+            - 股票格式: "名称(连板数,时间)" 或 "名称(连板数,时间,炸N)" (有炸板时)
+            - 时间只保留时:分
+            - hot_sectors 只包含Top 20热门板块
+        """
+        if not self.pro:
+            return {"success": False, "error": "Tushare not initialized"}
+        
+        target_date = date.replace('-', '')
+        
+        try:
+            loop = asyncio.get_running_loop()
+            
+            # 1. 获取当日所有涨停数据 (优先使用 limit_list_d，数据更全)
+            df_limit = await loop.run_in_executor(
+                None, 
+                lambda: self.pro.limit_list_d(trade_date=target_date, limit_type='U')
+            )
+            
+            if df_limit is None or df_limit.empty:
+                return {
+                    "date": target_date,
+                    "summary": "无涨停数据",
+                    "ladder": {},
+                    "hot_sectors": []
+                }
+            
+            # 2. 重新计算连板次数 (考虑停牌情况，跨越停牌期间计算连板)
+            logging.info("Recalculating limit_times (considering suspensions)...")
+            
+            # 获取交易日历（最近30个交易日，足够覆盖大部分连板+停牌）
+            df_cal = await loop.run_in_executor(
+                None, 
+                lambda: self.pro.trade_cal(exchange='', end_date=target_date, is_open='1', limit=35)
+            )
+            
+            if df_cal is not None and not df_cal.empty:
+                df_cal = df_cal.sort_values('cal_date', ascending=False)
+                trade_dates = df_cal['cal_date'].tolist()  # 所有交易日，降序
+                start_date = trade_dates[-1] if len(trade_dates) > 0 else target_date
+                
+                # 获取历史涨停数据和每日行情数据
+                df_history = await loop.run_in_executor(
+                    None,
+                    lambda: self.pro.limit_list_d(start_date=start_date, end_date=target_date, limit_type='U')
+                )
+                
+                if df_history is not None and not df_history.empty:
+                    # 过滤掉非交易日的记录
+                    df_history = df_history[df_history['trade_date'].isin(trade_dates)].copy()
+                    df_history = df_history.sort_values(['ts_code', 'trade_date'])
+                    
+                    # 批量获取所有涨停股票的每日行情（用于判断停牌）
+                    all_codes = df_limit['ts_code'].unique().tolist()
+                    
+                    # 分批获取（每批50只股票）
+                    stock_trading_dates = {}
+                    chunk_size = 50
+                    for i in range(0, len(all_codes), chunk_size):
+                        chunk_codes = all_codes[i:i+chunk_size]
+                        codes_str = ",".join(chunk_codes)
+                        
+                        df_chunk_daily = await loop.run_in_executor(
+                            None,
+                            lambda cs=codes_str: self.pro.daily(ts_code=cs, start_date=start_date, end_date=target_date)
+                        )
+                        
+                        if df_chunk_daily is not None and not df_chunk_daily.empty:
+                            for code in chunk_codes:
+                                df_code_daily = df_chunk_daily[df_chunk_daily['ts_code'] == code]
+                                stock_trading_dates[code] = set(df_code_daily['trade_date'].tolist())
+                        else:
+                            # 如果无法获取行情数据，假设所有日期都有交易（保守处理）
+                            for code in chunk_codes:
+                                stock_trading_dates[code] = set(trade_dates)
+                    
+                    limit_times_map = {}
+                    
+                    # 为每个股票计算连板次数
+                    for ts_code in all_codes:
+                        df_stock_limit = df_history[df_history['ts_code'] == ts_code].sort_values('trade_date')
+                        
+                        if len(df_stock_limit) == 0:
+                            consecutive_days = 1
+                        else:
+                            trading_dates_set = stock_trading_dates.get(ts_code, set())
+                            limit_dates = df_stock_limit['trade_date'].tolist()
+                            consecutive_days = 1
+                            
+                            # 从最后一个涨停日往前推
+                            for i in range(len(limit_dates) - 1, 0, -1):
+                                current_date = limit_dates[i]
+                                prev_limit_date = limit_dates[i-1]
+                                
+                                try:
+                                    current_idx = trade_dates.index(current_date)
+                                    prev_limit_idx = trade_dates.index(prev_limit_date)
+                                    
+                                    # 检查两个涨停日之间的所有交易日
+                                    # 如果中间的交易日都是停牌，则视为连续
+                                    between_dates = trade_dates[current_idx+1:prev_limit_idx]  # 注意降序
+                                    
+                                    # 检查中间日期是否都是停牌（没有行情数据）
+                                    all_suspended = True
+                                    for between_date in between_dates:
+                                        if between_date in trading_dates_set:
+                                            # 有行情数据，说明有交易，但没涨停，连板中断
+                                            all_suspended = False
+                                            break
+                                    
+                                    if all_suspended:
+                                        # 中间都是停牌，连板延续
+                                        consecutive_days += 1
+                                    else:
+                                        # 中间有交易日但没涨停，连板中断
+                                        break
+                                        
+                                except ValueError:
+                                    logging.warning(f"Date {current_date} or {prev_limit_date} not in trade calendar")
+                                    break
+                        
+                        limit_times_map[ts_code] = consecutive_days
+                    
+                    # 更新 limit_times 字段
+                    df_limit['limit_times'] = df_limit['ts_code'].map(limit_times_map).fillna(1).astype(int)
+                    logging.info(f"Recalculated limit_times for {len(limit_times_map)} stocks")
+                else:
+                    if 'limit_times' not in df_limit.columns:
+                        df_limit['limit_times'] = 1
+            else:
+                if 'limit_times' not in df_limit.columns:
+                    df_limit['limit_times'] = 1
+            
+            # 3. 基础统计
+            total_count = int(len(df_limit))
+            df_limit['limit_times'] = df_limit['limit_times'].fillna(1).astype(int)
+            max_height = int(df_limit['limit_times'].max())
+            lianban_count = int(len(df_limit[df_limit['limit_times'] >= 2]))
+            
+            # 4. 连板梯队分类（紧凑格式）
+            ladder = {
+                "10板": [],
+                "4板": [],
+                "3板": [],
+                "2板": [],
+                "首板": []
+            }
+            
+            # 收集股票信息（按连板数和时间排序）
+            stocks_by_board = []
+            for _, row in df_limit.iterrows():
+                limit_times = int(row['limit_times'])
+                first_time = self._format_time(row.get('first_time'))
+                open_times = int(row.get('open_times', 0)) if pd.notna(row.get('open_times')) else 0
+                
+                # 简化时间格式：只保留时分
+                time_short = first_time[:5] if first_time != '未知' else '??:??'
+                
+                # 紧凑格式：股票名(连板数,封板时间,炸板次数)
+                # 如果炸板次数为0则省略
+                if open_times > 0:
+                    stock_str = f"{row['name']}({limit_times}板,{time_short},炸{open_times})"
+                else:
+                    stock_str = f"{row['name']}({limit_times}板,{time_short})"
+                
+                stocks_by_board.append({
+                    'str': stock_str,
+                    'limit_times': limit_times,
+                    'first_time': first_time
+                })
+            
+            # 排序
+            stocks_by_board.sort(key=lambda x: (-x['limit_times'], x['first_time'] if x['first_time'] != '未知' else '99:99:99'))
+            
+            # 分配到梯队
+            for item in stocks_by_board:
+                lt = item['limit_times']
+                if lt >= 10:
+                    ladder["10板"].append(item['str'])
+                elif lt >= 4:
+                    ladder["4板"].append(item['str'])
+                elif lt == 3:
+                    ladder["3板"].append(item['str'])
+                elif lt == 2:
+                    ladder["2板"].append(item['str'])
+                else:
+                    ladder["首板"].append(item['str'])
+            
+            # 5. 板块统计（紧凑格式：Top N 热门板块）
+            hot_sectors = []
+            
+            try:
+                df_cpt = await loop.run_in_executor(
+                    None, 
+                    lambda: self.pro.limit_cpt_list(trade_date=target_date)
+                )
+                if df_cpt is not None and not df_cpt.empty:
+                    # 按涨停数排序，取前20
+                    df_cpt = df_cpt.sort_values('up_nums', ascending=False).head(20)
+                    for _, row in df_cpt.iterrows():
+                        name = str(row['name'])
+                        count = int(row['up_nums'])
+                        hot_sectors.append(f"{name}({count})")
+            except Exception as e:
+                logging.warning(f"Failed to fetch concept stats: {e}")
+            
+            # 如果没有概念板块数据，使用行业统计
+            if not hot_sectors and 'industry' in df_limit.columns:
+                industry_counts = df_limit['industry'].value_counts().head(10).to_dict()
+                for name, count in industry_counts.items():
+                    hot_sectors.append(f"{name}({int(count)})")
+            
+            # 6. 检查昨日最高连板股票今日是否继续连板
+            yesterday_leader_status = ""
+            try:
+                # 获取昨日交易日
+                df_cal_prev = await loop.run_in_executor(
+                    None,
+                    lambda: self.pro.trade_cal(exchange='', end_date=target_date, is_open='1', limit=5)
+                )
+                if df_cal_prev is not None and not df_cal_prev.empty and len(df_cal_prev) >= 2:
+                    df_cal_prev = df_cal_prev.sort_values('cal_date', ascending=False)
+                    prev_date = df_cal_prev.iloc[1]['cal_date']
+                    
+                    # 获取昨日涨停数据
+                    df_prev_limit = await loop.run_in_executor(
+                        None,
+                        lambda pd=prev_date: self.pro.limit_list_d(trade_date=pd, limit_type='U')
+                    )
+                    
+                    if df_prev_limit is not None and not df_prev_limit.empty:
+                        # 过滤非交易日
+                        df_prev_limit = df_prev_limit[df_prev_limit['trade_date'].isin(trade_dates)].copy()
+                        
+                        # 获取昨日所有股票的历史涨停数据来重新计算连板
+                        prev_codes = df_prev_limit['ts_code'].unique().tolist()
+                        
+                        df_prev_history = await loop.run_in_executor(
+                            None,
+                            lambda sd=start_date, pd=prev_date: self.pro.limit_list_d(
+                                start_date=sd, end_date=pd, limit_type='U'
+                            )
+                        )
+                        
+                        if df_prev_history is not None and not df_prev_history.empty:
+                            # 过滤并计算昨日连板数
+                            df_prev_history = df_prev_history[df_prev_history['trade_date'].isin(trade_dates)].copy()
+                            
+                            # 批量获取行情数据判断停牌
+                            chunk_size = 50
+                            prev_trading_dates_map = {}
+                            for i in range(0, len(prev_codes), chunk_size):
+                                chunk = prev_codes[i:i+chunk_size]
+                                codes_str = ",".join(chunk)
+                                df_chunk = await loop.run_in_executor(
+                                    None,
+                                    lambda cs=codes_str, sd=start_date, pd=prev_date: self.pro.daily(
+                                        ts_code=cs, start_date=sd, end_date=pd
+                                    )
+                                )
+                                if df_chunk is not None and not df_chunk.empty:
+                                    for code in chunk:
+                                        df_c = df_chunk[df_chunk['ts_code'] == code]
+                                        prev_trading_dates_map[code] = set(df_c['trade_date'].tolist())
+                            
+                            # 计算每只股票的连板数
+                            prev_limit_times = {}
+                            for code in prev_codes:
+                                df_stock = df_prev_history[df_prev_history['ts_code'] == code].sort_values('trade_date')
+                                if len(df_stock) == 0:
+                                    prev_limit_times[code] = 1
+                                else:
+                                    trading_dates_set = prev_trading_dates_map.get(code, set())
+                                    limit_dates = df_stock['trade_date'].tolist()
+                                    consecutive = 1
+                                    
+                                    for j in range(len(limit_dates) - 1, 0, -1):
+                                        curr = limit_dates[j]
+                                        prev = limit_dates[j-1]
+                                        try:
+                                            curr_idx = trade_dates.index(curr)
+                                            prev_idx = trade_dates.index(prev)
+                                            between = trade_dates[curr_idx+1:prev_idx]
+                                            all_suspended = all(d not in trading_dates_set for d in between)
+                                            if all_suspended:
+                                                consecutive += 1
+                                            else:
+                                                break
+                                        except:
+                                            break
+                                    prev_limit_times[code] = consecutive
+                            
+                            # 找出最高板
+                            max_board = max(prev_limit_times.values())
+                            leader_code = [k for k, v in prev_limit_times.items() if v == max_board][0]
+                            leader_row = df_prev_limit[df_prev_limit['ts_code'] == leader_code].iloc[0]
+                            leader_name = leader_row['name']
+                            
+                            # 检查今日是否继续
+                            today_leader = df_limit[df_limit['ts_code'] == leader_code]
+                            if not today_leader.empty:
+                                yesterday_leader_status = f"昨日最高板{leader_name}({max_board}板)今日继续"
+                            else:
+                                yesterday_leader_status = f"昨日最高板{leader_name}({max_board}板)今日未板"
+            except Exception as e:
+                logging.warning(f"Failed to check yesterday leader: {e}")
+            
+            # 7. 生成概要（客观数据）
+            summary_parts = [
+                f"涨停{total_count}家",
+                f"最高{max_height}板",
+                f"连板{lianban_count}家"
+            ]
+            if yesterday_leader_status:
+                summary_parts.append(yesterday_leader_status)
+            
+            result = {
+                "date": target_date,
+                "summary": " ".join(summary_parts),
+                "ladder": ladder,  # 直接使用简化后的字符串数组
+                "hot_sectors": hot_sectors  # Top 20 热门板块
+            }
+            
+            # 确保所有类型都是 JSON 可序列化的
+            return self._convert_to_native_types(result)
+            
+        except Exception as e:
+            logging.error(f"Market sentiment report failed: {e}")
+            import traceback
+            traceback.print_exc()
+            return {
+                "date": target_date,
+                "summary": f"错误: {str(e)}",
+                "ladder": {},
+                "hot_sectors": []
+            }
+    
+    def _format_time(self, time_value) -> str:
+        """格式化封板时间"""
+        if pd.isna(time_value) or time_value is None:
+            return "未知"
+        
+        time_str = str(int(time_value)).zfill(6)
+        try:
+            hh = time_str[0:2]
+            mm = time_str[2:4]
+            ss = time_str[4:6]
+            return f"{hh}:{mm}:{ss}"
+        except:
+            return "未知"
+    
+    def _convert_to_native_types(self, obj):
+        """
+        递归转换 pandas/numpy 类型为 Python 原生类型
+        确保 JSON 可序列化
+        """
+        import numpy as np
+        
+        if isinstance(obj, dict):
+            return {key: self._convert_to_native_types(value) for key, value in obj.items()}
+        elif isinstance(obj, list):
+            return [self._convert_to_native_types(item) for item in obj]
+        elif isinstance(obj, (np.integer, np.int64, np.int32)):
+            return int(obj)
+        elif isinstance(obj, (np.floating, np.float64, np.float32)):
+            return float(obj)
+        elif isinstance(obj, np.ndarray):
+            return obj.tolist()
+        elif pd.isna(obj):
+            return None
+        else:
+            return obj
+
     async def get_daban_indicators(self, stock_names: str, date: str) -> Dict[str, Any]:
         """
         获取打板核心因子 (Core Strategy Function)
@@ -661,11 +1057,14 @@ class ThsDabanService:
             # 个股热度排名
             hot_rank_map = await self._fetch_stock_hot_rank(target_date, names_list)
 
-            # 市场连板情绪
+            # 市场连板情绪 (旧版简单统计)
             market_sentiment = self._calculate_market_sentiment(df_limit_all_today)
 
             # 昨日涨停表现 (赚钱效应)
             yesterday_premium = await self._analyze_yesterday_premium(target_date)
+            
+            # 市场情绪复盘报告 (新增详细版)
+            market_report = await self.get_market_sentiment_report(target_date)
 
             # 热门板块 (Top 5 Concept Limit Up)
             hot_sectors_map = {} 
@@ -902,21 +1301,78 @@ class ThsDabanService:
         return {
             "success": True,
             "data": results,
-            "metadata": { "query_date": target_date }
+            "metadata": { 
+                "query_date": target_date,
+                "market_sentiment_report": market_report  # 新增：完整的市场情绪复盘
+            }
         }
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
     
-    async def test():
+    async def test_daban_indicators():
+        """测试个股打板因子分析"""
         service = ThsDabanService()
         dates = ['20251209'] # Use a recent date
         names = "利欧股份"
         
         for date in dates:
-            print(f"\nTesting Daban Analysis for {names} on {date}...")
+            print(f"\n{'='*60}")
+            print(f"Testing Daban Analysis for {names} on {date}...")
+            print(f"{'='*60}")
             result = await service.get_daban_indicators(names, date)
             import json
             print(json.dumps(result, ensure_ascii=False, indent=2))
-
-    asyncio.run(test())
+    
+    async def test_market_sentiment():
+        """测试市场情绪复盘报告"""
+        service = ThsDabanService()
+        date = '20260108'  # 使用图片中的日期作为示例
+        
+        print(f"\n{'='*60}")
+        print(f"Testing Market Sentiment Report for {date}")
+        print(f"{'='*60}")
+        
+        result = await service.get_market_sentiment_report(date)
+        
+        print(f"\n📊 市场情绪复盘 - {result['date']}")
+        print(f"{'='*60}")
+        
+        print(f"\n【整体概况】")
+        print(f"  {result['summary']}")
+        
+        print(f"\n【连板梯队】")
+        ladder = result['ladder']
+        for board_name in ['10板', '4板', '3板', '2板', '首板']:
+            if board_name in ladder:
+                stocks = ladder[board_name]
+                print(f"\n  {board_name} ({len(stocks)}家):")
+                for stock in stocks[:10]:  # 只显示前10个
+                    print(f"    {stock}")
+                if len(stocks) > 10:
+                    print(f"    ... 还有 {len(stocks) - 10} 只")
+        
+        print(f"\n【热门板块 Top 10】")
+        hot_sectors = result['hot_sectors']
+        for i, sector in enumerate(hot_sectors[:10], 1):
+            print(f"  {i}. {sector}")
+        
+        # 输出完整JSON供调试
+        print(f"\n{'='*60}")
+        print("Complete JSON Response (紧凑格式):")
+        print(f"{'='*60}")
+        import json
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    
+    # 选择要运行的测试
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == 'sentiment':
+        asyncio.run(test_market_sentiment())
+    elif len(sys.argv) > 1 and sys.argv[1] == 'daban':
+        asyncio.run(test_daban_indicators())
+    else:
+        print("Usage:")
+        print("  python ths_daban_indicator.py sentiment  # 测试市场情绪复盘")
+        print("  python ths_daban_indicator.py daban      # 测试个股打板因子")
+        print("\nRunning market sentiment test by default...")
+        asyncio.run(test_market_sentiment())
